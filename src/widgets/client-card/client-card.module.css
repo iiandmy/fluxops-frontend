@@ -1,0 +1,6 @@
+.client_card {
+  padding: var(--gap-2xs) var(--gap-xs);
+  background-color: var(--color-light-bg-info);
+  border-radius: var(--border-radius-s);
+  border-color: var(--color-light-border-primary);
+}
