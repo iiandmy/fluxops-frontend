@@ -42,6 +42,14 @@ export const clientSlice = createSlice({
 
 export const selectClients = (state: RootState) => state.clients;
 
+export const selectTotalClients = (state: RootState) => state.clients.connections.length;
+
+export const selectTotalActiveClients = (state: RootState) => 
+  state.clients.connections.filter((connection) => connection.status === 'active').length;
+
+export const selectTotalInactiveClients = (state: RootState) => 
+  state.clients.connections.filter((connection) => connection.status === 'inactive').length;
+
 export const {
   clearClients,
   setClients,

@@ -1,6 +1,7 @@
 export interface ClientDto {
   id: string,
-  address: [string, number],
+  ip: string,
+  port: number,
   status: 'active' | 'inactive',
   hostname: string,
 };

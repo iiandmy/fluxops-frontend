@@ -1,3 +1,13 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--color-light-text-primary-inverted);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -33,6 +43,8 @@
   --font-size-md: 16px;
   --font-size-lg: 20px;
   --font-size-xl: 24px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 36px;
 }
 
 :root {

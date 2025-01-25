@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sidebar {
+  min-width: 240px;
+  display: flex;
+}
+
+.footer {
+  background-color: var(--color-light-base-bg-alt-tertiary-inverted);
+  color: var(--color-light-text-primary-inverted);
+  text-align: center;
+  padding: 20px;
+}

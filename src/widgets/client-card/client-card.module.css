@@ -1,4 +1,5 @@
 .client_card {
+  max-width: 300px;
   padding: var(--gap-2xs) var(--gap-xs);
   background-color: var(--color-light-bg-info);
   border-radius: var(--border-radius-s);

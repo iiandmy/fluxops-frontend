@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: bold;
+  line-height: 18px;
+  max-width: 240px;
+  background-color: var(--color-light-bg-quaternary);
+  border-radius: var(--border-radius-s);
+  padding: 6px 8px;
+  margin: 6px 8px;
+}
+
+.status_wrapper {
+  height: fit-content;
+  display: flex;
+  gap: 6px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: var(--border-radius-s);
+  background-color: var(--color-light-bg-primary);
+}
