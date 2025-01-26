@@ -1,57 +1,58 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Client } from "./types";
-import { RootState } from "../../../app/app-store";
-import { clientApi } from "../api/client-api";
-import { mapClient } from "../lib/map-client";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+
+import { RootState } from '../../../app/app-store';
+import { clientApi } from '../api/client-api';
+import { Client } from './types';
 
 type ClientSliceState = {
-  connections: Client[]
+	connections: Client[];
 };
 
 const initialState: ClientSliceState = {
-  connections: []
+	connections: [],
 };
 
 export const clientSlice = createSlice({
-  name: 'clients',
-  initialState,
-  reducers: {
-    clearClients: (state) => {
-      state.connections = [];
-    },
-    setClients: (state, action: PayloadAction<Client[]>) => {
-      state.connections = action.payload;
-    },
-    addClient: (state, action: PayloadAction<Client>) => {
-      state.connections.push(action.payload);
-    }
-  },
-  extraReducers: (builder) => {
-    builder.addMatcher(
-      clientApi.endpoints.fetchClients.matchFulfilled,
-      (state: ClientSliceState, { payload }) => {
-        state.connections = [];
+	name: 'clients',
+	initialState,
+	reducers: {
+		clearClients: (state) => {
+			state.connections = [];
+		},
+		setClients: (state, action: PayloadAction<Client[]>) => {
+			state.connections = action.payload;
+		},
+		addClient: (state, action: PayloadAction<Client>) => {
+			state.connections.push(action.payload);
+		},
+	},
+	extraReducers: (builder) => {
+		builder.addMatcher(
+			clientApi.endpoints.fetchClients.matchFulfilled,
+			(state: ClientSliceState, { payload }) => {
+				state.connections = [];
 
-        payload.forEach((client) => {
-          state.connections.push(client);
-        });
-      }
-    )
-  }
-})
+				payload.forEach((client) => {
+					state.connections.push(client);
+				});
+			}
+		);
+	},
+});
 
 export const selectClients = (state: RootState) => state.clients;
 
-export const selectTotalClients = (state: RootState) => state.clients.connections.length;
+export const selectTotalClients = (state: RootState) =>
+	state.clients.connections.length;
 
-export const selectTotalActiveClients = (state: RootState) => 
-  state.clients.connections.filter((connection) => connection.status === 'active').length;
+export const selectTotalActiveClients = (state: RootState) =>
+	state.clients.connections.filter(
+		(connection) => connection.status === 'active'
+	).length;
 
-export const selectTotalInactiveClients = (state: RootState) => 
-  state.clients.connections.filter((connection) => connection.status === 'inactive').length;
+export const selectTotalInactiveClients = (state: RootState) =>
+	state.clients.connections.filter(
+		(connection) => connection.status === 'inactive'
+	).length;
 
-export const {
-  clearClients,
-  setClients,
-  addClient,
-} = clientSlice.actions;
+export const { clearClients, setClients, addClient } = clientSlice.actions;

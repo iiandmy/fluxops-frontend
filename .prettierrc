@@ -1,0 +1,21 @@
+{
+	"singleQuote": true,
+	"useTabs": true,
+	"tabWidth": 2,
+	"semi": true,
+	"bracketSpacing": true,
+	"printWidth": 80,
+	"trailingComma": "es5",
+	"endOfLine": "lf",
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+	"importOrder": [
+		"^@/app/(.*)$",
+		"^@/entities/(.*)$",
+		"^@/pages/(.*)$",
+		"^@/shared/(.*)$",
+		"^@/widgets/(.*)$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}

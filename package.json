@@ -1,44 +1,70 @@
 {
-  "name": "fluxops",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@reduxjs/toolkit": "^2.5.0",
-    "classnames": "^2.5.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "6.10.0",
-    "zod": "^3.24.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5",
-    "vite-tsconfig-paths": "^5.1.4"
-  },
-  "packageManager": "yarn@1.22.22",
-  "eslintConfig": {
-    "extends": "airbnb"
-  }
+	"name": "fluxops",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"preview": "vite preview",
+		"prepare": "husky install",
+		"prettier": "prettier -c .",
+		"prettier:fix": "prettier -w .",
+		"stylelint": "npx stylelint ./src/**/*.css --allow-empty-input",
+		"stylelint:fix": "npx stylelint src/**/*.css --fix --max-warnings 0 --allow-empty-input",
+		"lint:all": "prettier -w . && npx stylelint src/**/*.css --fix --max-warnings --allow-empty-input 0 && eslint . --fix",
+		"check": "eslint . && prettier -c . && npx stylelint '**/*.css' && tsc -b && vite build"
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^2.5.0",
+		"classnames": "^2.5.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-icons": "^5.4.0",
+		"react-redux": "^9.2.0",
+		"react-router-dom": "6.10.0",
+		"zod": "^3.24.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@trivago/prettier-plugin-sort-imports": "^5.2.1",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"@vitejs/plugin-react-swc": "^3.5.0",
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb": "19.0.4",
+		"eslint-config-airbnb-typescript": "^18.0.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-prettier": "^5.2.3",
+		"eslint-plugin-react": "^7.37.4",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"eslint-plugin-react-refresh": "^0.4.16",
+		"globals": "^15.14.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.4.2",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.14.0",
+		"stylelint-config-clean-order": "^7.0.0",
+		"stylelint-config-standard": "^37.0.0",
+		"typescript": "~5.6.2",
+		"typescript-eslint": "^8.18.2",
+		"vite": "^6.0.5",
+		"vite-tsconfig-paths": "^5.1.4"
+	},
+	"packageManager": "yarn@1.22.22",
+	"eslintConfig": {
+		"extends": [
+			"airbnb",
+			"airbnb-typescript"
+		]
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": "eslint --fix",
+		"*.{js,jsx,ts,tsx,html,css}": "prettier --write",
+		"*.{css}": "stylelint --fix"
+	}
 }

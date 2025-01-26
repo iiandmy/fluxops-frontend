@@ -1,19 +1,21 @@
 .sidebar_wrapper {
-  width: 100%;
-  background-color: var(--color-dark-status-muted-alt-info-press);
-  padding: 12px 10px;
-  
+	width: 100%;
+	padding: 12px 10px;
+	background-color: var(--color-dark-status-muted-alt-info-press);
 }
 
 .logo {
-  color: white;
-  font-size: var(--font-size-2xl);
-  font-weight: bold;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+	/* Safari */
 
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+	/* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+
+	font-size: var(--font-size-2xl);
+	font-weight: bold;
+	color: white;
 }
