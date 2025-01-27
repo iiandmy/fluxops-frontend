@@ -5,6 +5,8 @@ import { ClientCard } from "@/widgets/client-card";
 import { ClientList } from "@/widgets/client-list/client-list.component";
 import { ClientsDashboardCard } from "@/widgets/clients-dashboard-card";
 
+import css from './page.module.css';
+
 export const ClientPage = () => {
   const clients = useAppSelector(selectClients);
   const { isLoading } = useFetchClientsQuery();
@@ -32,7 +34,7 @@ export const ClientPage = () => {
   }
 
   return (
-    <div>
+    <div className={css.root}>
       <ClientsDashboardCard />
       <ClientList items={renderClients()} />
     </div>

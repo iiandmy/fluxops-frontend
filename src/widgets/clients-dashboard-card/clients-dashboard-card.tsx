@@ -15,7 +15,7 @@ const DashboardStatus = (
 ) => {
   return (
     <div className={css.status}>
-      <FaCircleDot color={getStatusColor(status)} size={8} /> 
+      <FaCircleDot color={getStatusColor(status)} size={14} /> 
       {amount}
     </div>
   )
@@ -27,7 +27,6 @@ export const ClientsDashboardCard = () => {
 
   return (
     <div className={css.root}>
-      Dashboard<br/>
       <div className={css.status_wrapper}>
         <DashboardStatus amount={activeClientsAmount} status={'active'} />
         <DashboardStatus amount={inactiveClientsAmount} status={'inactive'} />

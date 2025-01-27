@@ -1,14 +1,14 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-weight: bold;
+  gap: var(--gap-2xs);
+  /* font-weight: bold; */
   line-height: 18px;
-  max-width: 240px;
-  background-color: var(--color-light-bg-quaternary);
+  /* max-width: 240px; */
+  max-width: fit-content;
+  background-color: var(--color-light-bg-info);
   border-radius: var(--border-radius-s);
-  padding: 6px 8px;
-  margin: 6px 8px;
+  padding: var(--gap-2xs) var(--gap-xs);
 }
 
 .status_wrapper {
@@ -18,11 +18,11 @@
 }
 
 .status {
+  font-size: var(--font-size-lg);
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  padding: 2px 6px;
+  gap: var(--gap-xs);
+  padding: var(--gap-3xs) var(--gap-3xs);
   border-radius: var(--border-radius-s);
-  background-color: var(--color-light-bg-primary);
+  /* background-color: var(--color-light-bg-primary); */
 }
