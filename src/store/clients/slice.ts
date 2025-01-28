@@ -3,6 +3,9 @@ import { RootState } from '~/store';
 
 import { clientApi } from '~/api/client';
 
+import { env } from '~/lib/env';
+
+import { __mockClients_ } from './__mock__';
 import { Client } from './types';
 
 type ClientSliceState = {
@@ -41,7 +44,8 @@ export const clientSlice = createSlice({
 	},
 });
 
-export const selectClients = (state: RootState) => state.clients;
+export const selectClients = (state: RootState) =>
+	env.VITE_USE_MOCKS ? __mockClients_ : state.clients;
 
 export const selectTotalClients = (state: RootState) =>
 	state.clients.connections.length;

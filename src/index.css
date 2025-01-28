@@ -3,11 +3,17 @@
 *::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 a {
 	text-decoration: underline;
 	color: var(--color-light-text-primary-inverted);
+}
+
+body,
+html {
+	background-color: var(--color-dark-bg-component);
 }
 
 :root {
@@ -47,9 +53,14 @@ a {
 	--font-size-xl: 24px;
 	--font-size-2xl: 30px;
 	--font-size-3xl: 36px;
+
+	--color-light-bebra: #fff;
+	--color-dark-bebra: #000;
 }
 
 :root {
+	--color-light-bg-plate: #e2e7eb;
+
 	--color-light-accent-primary: #ef3124;
 	--color-light-accent-primary-hover: #e32a17;
 	--color-light-accent-primary-press: #d72505;

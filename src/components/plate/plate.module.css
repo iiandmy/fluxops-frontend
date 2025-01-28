@@ -1,0 +1,38 @@
+.root {
+	display: flex;
+	flex-direction: column;
+
+	width: fit-content;
+	min-width: 120px;
+	border-radius: var(--border-radius-m);
+
+	color: var(--color-light-text-primary);
+
+	background-color: var(--color-light-bg-secondary);
+}
+
+.block {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: var(--gap-s) var(--gap-m);
+}
+
+.content {
+	flex-grow: 1;
+	min-width: 0;
+	padding: var(--gap-s) var(--gap-m);
+}
+
+.pt0 {
+	padding-top: 0;
+}
+
+.content_wrapper {
+	overflow: auto;
+}

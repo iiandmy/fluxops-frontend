@@ -2,6 +2,11 @@ import { ZodError, z } from 'zod';
 
 const envVariablesSchema = z.object({
 	VITE_SERVER_API_URL: z.string(),
+	VITE_USE_MOCKS: z
+		.string()
+		.toLowerCase()
+		.transform((x) => x === 'true')
+		.pipe(z.boolean()),
 });
 
 let env: z.infer<typeof envVariablesSchema>;

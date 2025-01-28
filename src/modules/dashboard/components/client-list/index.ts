@@ -1,1 +1,1 @@
-export * from './client-list.component.tsx';
+export * from './client-list';

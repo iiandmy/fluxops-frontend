@@ -9,3 +9,7 @@
 	max-width: 240px;
 	max-height: 480px;
 }
+
+.content_wrapper {
+	margin-top: var(--gap-2xs);
+}
