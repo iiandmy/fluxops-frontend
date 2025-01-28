@@ -66,6 +66,6 @@
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": "eslint --fix",
 		"*.{js,jsx,ts,tsx,html,css}": "prettier --write",
-		"*.css": "stylelint --fix"
+		"*.css": "stylelint --fix --allow-empty-input"
 	}
 }
