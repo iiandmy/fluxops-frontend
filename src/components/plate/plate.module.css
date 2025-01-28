@@ -4,6 +4,7 @@
 
 	width: fit-content;
 	min-width: 120px;
+	max-height: 100%;
 	border-radius: var(--border-radius-m);
 
 	color: var(--color-light-text-primary);
@@ -26,6 +27,7 @@
 .content {
 	flex-grow: 1;
 	min-width: 0;
+	max-height: 100%;
 	padding: var(--gap-s) var(--gap-m);
 }
 

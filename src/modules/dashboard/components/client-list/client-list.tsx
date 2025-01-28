@@ -15,6 +15,7 @@ export const ClientList: FC<ClientListProps> = (props) => {
 			leftHeaderAddon={<FaRegUser size={20} color="#FA5252" />}
 			rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
 			contentClassName={css.content_wrapper}
+			className={css.root}
 		>
 			{props.items}
 		</Plate>
