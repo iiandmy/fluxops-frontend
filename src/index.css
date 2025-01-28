@@ -54,19 +54,15 @@ a {
 	--font-size-xl: 24px;
 	--font-size-2xl: 30px;
 	--font-size-3xl: 36px;
-
-	--color-light-bebra: #fff;
-	--color-dark-bebra: #000;
 }
 
 :root {
+	--color-dark-status-muted-alt-info-press: #38476c;
 	--color-light-bg-plate: #e2e7eb;
-
 	--color-light-bg-info: #d6e8fc;
+	--color-light-bg-secondary: #f2f3f5;
 	--color-light-specialbg-tertiary-transparent: rgba(30, 43, 68, 0.08);
 	--color-light-text-primary: rgba(3, 3, 6, 0.88);
-	--color-light-bg-secondary: #f2f3f5;
-	--color-dark-status-muted-alt-info-press: #38476c;
 	--color-light-neutral-0-hover: #e7e8eb;
 	--color-light-border-primary: #d5d6dc;
 }
