@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider as ReduxProvider } from 'react-redux'
-import { appStore } from './app/app-store'
+import { appStore } from '~/store/app-store'
 import { RouterProvider } from 'react-router-dom'
-import { appRouter } from './app/app-router'
+import { appRouter } from '~/app/app-router'
 
 import './index.css'
 

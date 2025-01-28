@@ -1,9 +1,9 @@
-import { selectIsAuthorized } from "@/entities/session";
-import { useAppSelector } from "@/shared/model";
+import { useAppSelector } from "~/hooks/index";
 import { ReactElement } from "react"
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import { ClientPage } from "~/modules/dashboard/pages/page";
+import { selectIsAuthorized } from "~/store/session/slice";
 import { baseLayout } from "./layout";
-import { ClientPage } from "@/pages/client/ui/page/page";
 
 type GuestGuardedProps = {
   children: ReactElement;

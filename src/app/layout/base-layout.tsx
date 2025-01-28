@@ -1,5 +1,4 @@
-import { Layout } from '@/shared/ui/layout';
-import { Sidebar } from '@/widgets/sidebar/sidebar';
+import { Layout, Sidebar } from "~/components";
 
 export const baseLayout = (
   <Layout 
