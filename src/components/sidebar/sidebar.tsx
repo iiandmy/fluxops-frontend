@@ -4,13 +4,19 @@ import css from './sidebar.module.css';
 
 export const Sidebar = () => {
 	return (
-		<div className={css.root}>
-			<div className={css.logo}>Fluxops</div>
-			<div className={css.sidebar_content}>
-				<Button variant="primary" className={css.sidebar_item}>
-					Dashboard
+		<aside className={css.root}>
+			<div className={css.logo}>Flux</div>
+			<nav className={css.nav}>
+				<Button variant="primary" className={css.nav_item}>
+					1
 				</Button>
-			</div>
-		</div>
+				<Button variant="primary" className={css.nav_item}>
+					2
+				</Button>
+				<Button variant="primary" className={css.nav_item}>
+					3
+				</Button>
+			</nav>
+		</aside>
 	);
 };

@@ -1,0 +1,15 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 60px;
+	padding: var(--gap-m) var(--gap-l);
+}
+
+.container {
+	display: flex;
+	gap: var(--gap-l);
+	align-items: center;
+	width: fit-content;
+}

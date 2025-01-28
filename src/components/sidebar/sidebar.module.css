@@ -1,35 +1,55 @@
 .root {
+	position: absolute;
+	top: 0;
+	left: 0;
+
 	display: flex;
 	flex-direction: column;
 	gap: var(--gap-m);
 
-	width: 100%;
+	width: 50px;
+	min-height: 100%;
 	padding: var(--gap-s) var(--gap-xl);
 
 	background-color: var(--color-dark-status-muted-alt-info-press);
+
+	transition: all 0.3s linear;
+}
+
+.root:hover {
+	width: 150px;
 }
 
 .logo {
 	/* Safari */
 
- /* IE 10 and IE 11 */
+	/* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
 
-	display: flex;
-	justify-content: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+	transform: rotate(-180deg);
 
-	width: 100%;
-
+	writing-mode: vertical-rl;
 	font-size: var(--font-size-2xl);
 	font-weight: bold;
 	color: white;
 }
 
-.sidebar_content {
+.nav {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-s);
+	align-items: center;
+	justify-content: center;
+
 	width: 100%;
+	margin-top: 100px;
 }
 
-.sidebar_item {
+.nav_item {
 	width: 100%;
 	text-align: left;
 	transition:
