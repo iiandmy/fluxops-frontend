@@ -3,11 +3,21 @@
 *::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+	height: 100vh;
 }
 
 a {
 	text-decoration: underline;
 	color: var(--color-light-text-primary-inverted);
+}
+
+#root {
+	height: 100%;
 }
 
 :root {

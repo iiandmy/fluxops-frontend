@@ -1,3 +1,5 @@
-import { Layout, Sidebar } from '~/components';
+import { Header, Layout, Sidebar } from '~/components';
 
-export const baseLayout = <Layout sidebarSlot={<Sidebar />} />;
+export const baseLayout = (
+	<Layout sidebarSlot={<Sidebar />} headerSlot={<Header />} />
+);
