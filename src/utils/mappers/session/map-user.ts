@@ -1,5 +1,5 @@
-import { UserDto } from "~/api/session/types";
-import { User } from "~/store/session/types";
+import { UserDto } from "~/api/session";
+import { User } from "~/store/session";
 
 export function mapUser(dto: UserDto): User {
   return {

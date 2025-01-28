@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { sessionApi } from "~/api/session";
-import { RootState } from "~/store/app-store";
+import { RootState } from "~/store";
 
 interface SessionSliceState {
   isAuthorized: boolean;

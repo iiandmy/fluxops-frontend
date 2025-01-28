@@ -1,5 +1,5 @@
 import { BaseQueryFn, FetchArgs, fetchBaseQuery, FetchBaseQueryError, FetchBaseQueryMeta } from "@reduxjs/toolkit/query";
-import { env } from "../lib/env";
+import { env } from "~/lib";
 
 export const baseQuery: BaseQueryFn<
   string | FetchArgs,

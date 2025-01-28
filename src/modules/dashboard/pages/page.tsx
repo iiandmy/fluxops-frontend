@@ -1,5 +1,5 @@
-import { useFetchClientsQuery } from "~/api/client/client-api";
-import { useAppSelector } from "~/hooks/index";
+import { useFetchClientsQuery } from "~/api/client";
+import { useAppSelector } from "~/hooks";
 import { ClientCard, ClientList, ClientsDashboardCard } from "~/modules/dashboard/components";
 import { selectClients } from "~/store/clients";
 

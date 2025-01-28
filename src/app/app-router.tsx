@@ -1,8 +1,8 @@
 import { useAppSelector } from "~/hooks/index";
 import { ReactElement } from "react"
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import { ClientPage } from "~/modules/dashboard/pages/page";
-import { selectIsAuthorized } from "~/store/session/slice";
+import { ClientPage } from "~/modules/dashboard/pages";
+import { selectIsAuthorized } from "~/store/session";
 import { baseLayout } from "./layout";
 
 type GuestGuardedProps = {

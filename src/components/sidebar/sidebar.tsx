@@ -1,4 +1,4 @@
-import { Button } from '~/components/button';
+import { Button } from '~/components';
 import css from './sidebar.module.css';
 
 export const Sidebar = () => {

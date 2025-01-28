@@ -1,7 +1,7 @@
 import { mapSession, mapUser } from "~/utils/mappers/session";
-import { baseApi } from "../base-api";
+import { baseApi } from "~/api";
 import { RequestLoginBody, SessionDto, UserDto } from "./types";
-import { Session, User } from "~/store/session/types";
+import { Session, User } from "~/store/session";
 
 export const sessionApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Client } from "./types";
 import { clientApi } from "~/api/client";
-import { RootState } from "~/store/app-store";
+import { RootState } from "~/store";
 
 type ClientSliceState = {
   connections: Client[]

@@ -1,7 +1,7 @@
-import { Client } from "~/store/clients/types";
-import { baseApi } from "../base-api";
+import { Client } from "~/store/clients";
+import { baseApi } from "~/api";
 import { FetchClientsResponse } from "./types";
-import { mapResponse } from "~/utils/mappers/client/map-client";
+import { mapResponse } from "~/utils/mappers/client";
 
 export const clientApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
