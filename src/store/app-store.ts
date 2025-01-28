@@ -4,8 +4,6 @@ import { baseApi } from '~/api';
 
 import { rootReducer } from './root-reducer';
 
-const a = 5;
-
 export const makeStore = () => {
 	const store = configureStore({
 		reducer: rootReducer,
