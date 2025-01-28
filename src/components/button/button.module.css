@@ -1,14 +1,14 @@
 .root {
-  border-radius: var(--border-radius-s);
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
+	cursor: pointer;
+	padding: 6px 12px;
+	border: none;
+	border-radius: var(--border-radius-s);
 }
 
-.button-primary {
-  background-color: var(--color-light-bg-info);
+.button_primary {
+	background-color: var(--color-light-bg-info);
 }
 
-.button-secondary {
-  background-color: var(--color-light-specialbg-tertiary-transparent);
+.button_secondary {
+	background-color: var(--color-light-specialbg-tertiary-transparent);
 }

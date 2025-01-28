@@ -1,35 +1,43 @@
 .root {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-m);
-  width: 100%;
-  background-color: var(--color-dark-status-muted-alt-info-press);
-  padding: var(--gap-s) var(--gap-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-m);
+
+	width: 100%;
+	padding: var(--gap-s) var(--gap-xl);
+
+	background-color: var(--color-dark-status-muted-alt-info-press);
 }
 
 .logo {
-  color: white;
-  font-size: var(--font-size-2xl);
-  font-weight: bold;
-  width: 100%;
-  display: flex;
-  justify-content: left;
+	/* Safari */
 
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+ /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+
+	display: flex;
+	justify-content: left;
+
+	width: 100%;
+
+	font-size: var(--font-size-2xl);
+	font-weight: bold;
+	color: white;
 }
 
 .sidebar_content {
-  width: 100%;
+	width: 100%;
 }
 
 .sidebar_item {
-  width: 100%;
-  text-align: left;
-  transition: background .2s ease, border .2s ease, color .2s ease;
+	width: 100%;
+	text-align: left;
+	transition:
+		background 0.2s ease,
+		border 0.2s ease,
+		color 0.2s ease;
 }
 
 .sidebar_item:hover {
-  background-color: var(--color-light-neutral-0-hover);
+	background-color: var(--color-light-neutral-0-hover);
 }

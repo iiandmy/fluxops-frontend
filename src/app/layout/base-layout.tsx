@@ -1,7 +1,3 @@
-import { Layout, Sidebar } from "~/components";
+import { Layout, Sidebar } from '~/components';
 
-export const baseLayout = (
-  <Layout 
-    sidebarSlot={<Sidebar />}
-  />
-)
+export const baseLayout = <Layout sidebarSlot={<Sidebar />} />;

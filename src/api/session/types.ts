@@ -1,17 +1,17 @@
 export type SessionDto = {
-  accessToken: string
-  user: {
-    email: string
-    id: number
-  }
-}
+	accessToken: string;
+	user: {
+		email: string;
+		id: number;
+	};
+};
 
 export type RequestLoginBody = {
-  email: string
-  password: string
-}
+	email: string;
+	password: string;
+};
 
 export type UserDto = {
-  id: number
-  email: string
-}
+	id: number;
+	email: string;
+};

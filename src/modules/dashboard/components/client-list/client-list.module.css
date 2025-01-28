@@ -1,11 +1,11 @@
 .root {
-  /* width: 100%; */
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-2xs);
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-2xs);
 }
 
 .node_wrapper {
-  max-width: 240px;
-  max-height: 480px;
+	max-width: 240px;
+	max-height: 480px;
 }
