@@ -1,33 +1,19 @@
 .root {
-	overflow-x: hidden;
+	position: relative;
+
 	display: flex;
 	flex-direction: row;
 
 	width: 100%;
-	min-height: 100vh;
+	height: 100%;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	min-height: 100vh;
-}
-
-.content {
-	display: flex;
-	flex-direction: column;
 	flex-grow: 1;
-}
 
-.sidebar {
-	display: flex;
-	min-width: 240px;
-}
-
-.footer {
-	padding: 20px;
-	color: var(--color-light-text-primary-inverted);
-	text-align: center;
-	background-color: var(--color-light-base-bg-alt-tertiary-inverted);
+	width: 100%;
+	height: 100%;
+	margin-left: 50px;
 }
