@@ -10,10 +10,11 @@ body {
 	overflow: hidden;
 	max-height: 100vh;
 	height: 100vh;
+	background-color: var(--color-light-bg-body);
 }
 
 a {
-	text-decoration: underline;
+	text-decoration: none;
 	color: var(--color-light-text-primary-inverted);
 }
 
@@ -66,9 +67,13 @@ a {
 }
 
 :root {
+	--color-light-bg-button: #ffffff;
 	--color-dark-status-muted-alt-info-press: #38476c;
-	--color-light-bg-plate: #e2e7eb;
+	--color-light-bg-header: #383c49;
+	--color-light-bg-plate: #f3f3f3;
+	--color-light-bg-card: #e2e7eb;
 	--color-light-bg-info: #d6e8fc;
+	--color-light-bg-body: #cecece;
 	--color-light-bg-secondary: #f2f3f5;
 	--color-light-specialbg-tertiary-transparent: rgba(30, 43, 68, 0.08);
 	--color-light-text-primary: rgba(3, 3, 6, 0.88);

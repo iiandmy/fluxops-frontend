@@ -1,13 +1,18 @@
 import { ReactElement } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { AppRoutes } from '~/constants';
 
-import { ClientPage } from '~/modules/dashboard/pages';
+import { AutomationPage } from '~/modules/automation/pages';
+import { ClientsPage } from '~/modules/clients/pages';
+import { DashboardPage } from '~/modules/dashboard/pages';
+import { SettingsPage } from '~/modules/settings/pages';
+import { UsersPage } from '~/modules/users/pages';
 
 import { selectIsAuthorized } from '~/store/session';
 
 import { useAppSelector } from '~/hooks/index';
 
-import { baseLayout } from './layout';
+import { BaseLayout } from './layout';
 
 type GuestGuardedProps = {
 	children: ReactElement;
@@ -41,14 +46,14 @@ const AuthGuard = ({ children }: AuthGuardedProps) => {
 export const appRouter = () =>
 	createBrowserRouter([
 		{
-			element: baseLayout,
+			element: BaseLayout,
 			errorElement: <div>error</div>,
 			loader: async () => {
 				return await (<>123</>);
 			},
 			children: [
 				{
-					path: '/login',
+					path: AppRoutes.Login,
 					element: (
 						<AuthGuard>
 							<div>login</div>
@@ -56,10 +61,42 @@ export const appRouter = () =>
 					),
 				},
 				{
-					path: '/',
+					path: AppRoutes.Dashboard,
 					element: (
 						<GuestGuard>
-							<ClientPage />
+							<DashboardPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Users,
+					element: (
+						<GuestGuard>
+							<UsersPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Automation,
+					element: (
+						<GuestGuard>
+							<AutomationPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Clients,
+					element: (
+						<GuestGuard>
+							<ClientsPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Settings,
+					element: (
+						<GuestGuard>
+							<SettingsPage />
 						</GuestGuard>
 					),
 				},

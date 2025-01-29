@@ -1,8 +1,6 @@
 name: Continuous Integration
 on:
   pull_request:
-    types:
-      - opened
     branches: ['dev', 'main']
 
 jobs:

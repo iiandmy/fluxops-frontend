@@ -3,7 +3,8 @@ import { GoProjectTemplate } from 'react-icons/go';
 import { SlChart } from 'react-icons/sl';
 import { TbLogs } from 'react-icons/tb';
 import { Plate } from '~/components';
-import { useAppSelector } from '~/hooks';
+import { PageTitle } from '~/constants';
+import { useAppSelector, useTitle } from '~/hooks';
 
 import { ClientCard, ClientList } from '~/modules/dashboard/components';
 
@@ -13,9 +14,10 @@ import { selectClients } from '~/store/clients';
 
 import css from './page.module.css';
 
-export const ClientPage = () => {
+export const DashboardPage = () => {
 	const clients = useAppSelector(selectClients);
 	const { isLoading } = useFetchClientsQuery();
+	useTitle(PageTitle.Dashboard);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
