@@ -5,6 +5,9 @@
 
 	height: 60px;
 	padding: var(--gap-m) var(--gap-l);
+
+	background-color: var(--color-light-bg-header);
+	box-shadow: 1px 1px 3px 0 #00000040;
 }
 
 .container {
