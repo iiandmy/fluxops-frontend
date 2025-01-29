@@ -6,7 +6,7 @@ import {
 } from 'react-icons/io5';
 import { AppRoutes } from '~/constants';
 
-export const NAV_ITEMS = [
+export const NavItems = [
 	{
 		id: 1,
 		icon: <IoHomeOutline width={32} height={32} />,
@@ -37,4 +37,4 @@ export const NAV_ITEMS = [
 		title: 'Settings',
 		href: AppRoutes.Settings,
 	},
-];
+] as const;

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '~/components';
 
-import { NAV_ITEMS } from './config';
+import { NavItems } from './config';
 import css from './sidebar.module.css';
 
 export const Sidebar = () => {
@@ -10,7 +10,7 @@ export const Sidebar = () => {
 	return (
 		<aside className={css.root}>
 			<nav className={css.nav}>
-				{NAV_ITEMS.map(({ id, icon, title, href }) => (
+				{NavItems.map(({ id, icon, title, href }) => (
 					<Button
 						variant="primary"
 						className={css.nav_item}

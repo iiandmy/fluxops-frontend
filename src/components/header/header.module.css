@@ -20,6 +20,6 @@
 .placeholder {
 	width: 100px;
 	height: 20px;
-	border-radius: var(--gap-2xs);
+	border-radius: var(--border-radius-s);
 	background-color: var(--color-light-bg-plate);
 }

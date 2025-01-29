@@ -7,7 +7,7 @@
 
 .button_primary {
 	color: var(--color-light-text-primary);
-	background-color: var(--color-light-button);
+	background-color: var(--color-light-bg-button);
 }
 
 .button_secondary {

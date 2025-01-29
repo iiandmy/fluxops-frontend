@@ -67,7 +67,7 @@ a {
 }
 
 :root {
-	--color-light-button: #ffffff;
+	--color-light-bg-button: #ffffff;
 	--color-dark-status-muted-alt-info-press: #38476c;
 	--color-light-bg-header: #383c49;
 	--color-light-bg-plate: #f3f3f3;
