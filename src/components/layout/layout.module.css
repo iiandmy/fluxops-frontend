@@ -8,9 +8,10 @@
 }
 
 .container {
-	width: calc(100% - 50px);
+	display: block;
+	width: calc(100% - 64px);
 	height: calc(100% - 60px);
-	margin-left: 50px;
+	margin-left: 64px;
 }
 
 .content_wrapper {

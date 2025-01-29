@@ -5,6 +5,9 @@
 
 	height: 60px;
 	padding: var(--gap-m) var(--gap-l);
+
+	background-color: var(--color-light-bg-header);
+	box-shadow: 1px 1px 3px 0 #00000040;
 }
 
 .container {
@@ -12,4 +15,11 @@
 	gap: var(--gap-l);
 	align-items: center;
 	width: fit-content;
+}
+
+.placeholder {
+	width: 100px;
+	height: 20px;
+	border-radius: var(--border-radius-s);
+	background-color: var(--color-light-bg-plate);
 }

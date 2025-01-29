@@ -3,11 +3,15 @@ import { GoProjectTemplate } from 'react-icons/go';
 import { SlChart } from 'react-icons/sl';
 import { TbLogs } from 'react-icons/tb';
 import { Plate } from '~/components';
+import { PageTitle } from '~/constants';
+import { useTitle } from '~/hooks';
 
 import { Clients } from '../widgets';
 import css from './page.module.css';
 
-export const ClientPage = () => {
+export const DashboardPage = () => {
+	useTitle(PageTitle.Dashboard);
+
 	return (
 		<div className={css.root}>
 			<div className={css.grid}>

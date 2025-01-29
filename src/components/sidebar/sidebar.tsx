@@ -1,21 +1,26 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '~/components';
 
+import { navItems } from './config';
 import css from './sidebar.module.css';
 
 export const Sidebar = () => {
+	const navigate = useNavigate();
+
 	return (
 		<aside className={css.root}>
-			<div className={css.logo}>Flux</div>
 			<nav className={css.nav}>
-				<Button variant="primary" className={css.nav_item}>
-					1
-				</Button>
-				<Button variant="primary" className={css.nav_item}>
-					2
-				</Button>
-				<Button variant="primary" className={css.nav_item}>
-					3
-				</Button>
+				{navItems.map(({ id, icon, title, href }) => (
+					<Button
+						variant="primary"
+						className={css.nav_item}
+						key={id}
+						onClick={() => navigate(href)}
+					>
+						<div className={css.nav_item_icon}>{icon}</div>
+						<p className={css.nav_item_text}>{title}</p>
+					</Button>
+				))}
 			</nav>
 		</aside>
 	);
