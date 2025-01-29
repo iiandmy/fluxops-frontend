@@ -1,3 +1,3 @@
-import css from './styles.module.css';
+import css from './separator.module.css';
 
 export const Separator = () => <div className={css.separator} />;
