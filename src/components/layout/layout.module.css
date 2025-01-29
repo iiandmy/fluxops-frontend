@@ -1,16 +1,19 @@
 .root {
 	position: relative;
 
-	display: flex;
-	flex-direction: row;
-
 	width: 100%;
+	max-width: 100%;
+	height: 100vh;
 	max-height: 100vh;
 }
 
 .container {
-	display: block;
-	width: 100%;
-	height: 100vh;
+	width: calc(100% - 50px);
+	height: 100%;
 	margin-left: 50px;
+}
+
+.content_wrapper {
+	position: relative;
+	height: calc(100% - 60px);
 }
