@@ -11,9 +11,9 @@ interface LayoutProps extends PropsWithChildren {
 
 export const Layout: FC<LayoutProps> = (props) => {
 	return (
-		<>
+		<div className={css.root}>
 			{props.headerSlot}
-			<main className={css.root}>
+			<main className={css.content_wrapper}>
 				{props.sidebarSlot}
 				<div className={css.container}>
 					<Outlet />
@@ -21,6 +21,6 @@ export const Layout: FC<LayoutProps> = (props) => {
 				{props.footerSlot}
 				<ScrollRestoration />
 			</main>
-		</>
+		</div>
 	);
 };
