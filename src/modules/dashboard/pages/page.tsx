@@ -13,7 +13,7 @@ import { selectClients } from '~/store/clients';
 
 import css from './page.module.css';
 
-export const ClientPage = () => {
+export const DashboardPage = () => {
 	const clients = useAppSelector(selectClients);
 	const { isLoading } = useFetchClientsQuery();
 
