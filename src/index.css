@@ -66,6 +66,8 @@ a {
 }
 
 :root {
+	--color-status-success: #5cb85c;
+	--color-status-failure: #d63124;
 	--color-dark-status-muted-alt-info-press: #38476c;
 	--color-light-bg-plate: #e2e7eb;
 	--color-light-bg-info: #d6e8fc;

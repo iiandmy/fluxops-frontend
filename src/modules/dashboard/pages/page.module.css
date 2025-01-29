@@ -15,12 +15,6 @@
 	max-height: 100%;
 }
 
-.clients_list {
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap-xs);
-}
-
 .right_widget_group {
 	display: flex;
 	flex-direction: column;

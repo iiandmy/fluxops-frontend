@@ -3,43 +3,16 @@ import { GoProjectTemplate } from 'react-icons/go';
 import { SlChart } from 'react-icons/sl';
 import { TbLogs } from 'react-icons/tb';
 import { Plate } from '~/components';
-import { useAppSelector } from '~/hooks';
 
-import { ClientCard, ClientList } from '~/modules/dashboard/components';
-
-import { useFetchClientsQuery } from '~/api/client';
-
-import { selectClients } from '~/store/clients';
-
+import { Clients } from '../widgets';
 import css from './page.module.css';
 
 export const ClientPage = () => {
-	const clients = useAppSelector(selectClients);
-	const { isLoading } = useFetchClientsQuery();
-
-	if (isLoading) {
-		return <div>Loading...</div>;
-	}
-
-	// if (clients.connections.length === 0) {
-	// 	return <div>No connections</div>;
-	// }
-
-	const renderClients = () => {
-		return (
-			<div className={css.clients_list}>
-				{clients.connections.map((connection) => (
-					<ClientCard key={connection.id} client={connection} />
-				))}
-			</div>
-		);
-	};
-
 	return (
 		<div className={css.root}>
 			<div className={css.grid}>
 				<div>
-					<ClientList items={renderClients()} />
+					<Clients />
 				</div>
 				<div className={css.right_widget_group}>
 					<Plate

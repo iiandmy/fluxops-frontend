@@ -1,28 +1,23 @@
-import classNames from 'classnames';
-import type { FC, ReactElement } from 'react';
-import { FaQuestion, FaRegUser } from 'react-icons/fa6';
-import { Plate } from '~/components';
-import { StyleConstants } from '~/constants/styles';
+import { useClients } from '~/hooks/clients';
 
+import { ClientCard } from '../client-card';
 import css from './client-list.module.css';
+import { ClientListSkeleton } from './client-list.skeleton';
 
-interface ClientListProps {
-	items: ReactElement;
-}
+export const ClientList = () => {
+	const { clients, isLoading } = useClients();
 
-export const ClientList: FC<ClientListProps> = (props) => {
+	if (isLoading) return <ClientListSkeleton />;
+
+	if (clients.connections.length === 0) {
+		return <div>No connections</div>;
+	}
+
 	return (
-		<Plate
-			block={true}
-			leftHeaderAddon={<FaRegUser size={20} color="#FA5252" />}
-			rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
-			contentClassName={classNames(
-				StyleConstants.hide_scrollbar,
-				css.content_wrapper
-			)}
-			className={css.root}
-		>
-			{props.items}
-		</Plate>
+		<div className={css.root}>
+			{clients.connections.map((connection) => (
+				<ClientCard key={connection.id} client={connection} />
+			))}
+		</div>
 	);
 };
