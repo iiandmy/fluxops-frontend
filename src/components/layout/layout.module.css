@@ -9,11 +9,11 @@
 
 .container {
 	width: calc(100% - 50px);
-	height: 100%;
+	height: calc(100% - 60px);
 	margin-left: 50px;
 }
 
 .content_wrapper {
 	position: relative;
-	height: calc(100% - 60px);
+	height: 100%;
 }
