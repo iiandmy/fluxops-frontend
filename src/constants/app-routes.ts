@@ -1,7 +1,8 @@
 export enum AppRoutes {
-	Home = '/',
+	Dashboard = '/',
 	Clients = '/clients',
 	Automation = '/automation',
 	Users = '/users',
 	Settings = '/settings',
+	Login = '/login',
 }

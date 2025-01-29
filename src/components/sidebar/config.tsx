@@ -11,7 +11,7 @@ export const NAV_ITEMS = [
 		id: 1,
 		icon: <IoHomeOutline width={32} height={32} />,
 		title: 'Dashboard',
-		href: AppRoutes.Home,
+		href: AppRoutes.Dashboard,
 	},
 	{
 		id: 2,

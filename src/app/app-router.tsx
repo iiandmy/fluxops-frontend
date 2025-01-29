@@ -1,7 +1,12 @@
 import { ReactElement } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { AppRoutes } from '~/constants';
 
+import { AutomationPage } from '~/modules/automation/pages';
+import { ClientsPage } from '~/modules/clients/pages';
 import { DashboardPage } from '~/modules/dashboard/pages';
+import { SettingsPage } from '~/modules/settings/pages';
+import { UsersPage } from '~/modules/users/pages';
 
 import { selectIsAuthorized } from '~/store/session';
 
@@ -48,7 +53,7 @@ export const appRouter = () =>
 			},
 			children: [
 				{
-					path: '/login',
+					path: AppRoutes.Login,
 					element: (
 						<AuthGuard>
 							<div>login</div>
@@ -56,10 +61,42 @@ export const appRouter = () =>
 					),
 				},
 				{
-					path: '/',
+					path: AppRoutes.Dashboard,
 					element: (
 						<GuestGuard>
 							<DashboardPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Users,
+					element: (
+						<GuestGuard>
+							<UsersPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Automation,
+					element: (
+						<GuestGuard>
+							<AutomationPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Clients,
+					element: (
+						<GuestGuard>
+							<ClientsPage />
+						</GuestGuard>
+					),
+				},
+				{
+					path: AppRoutes.Settings,
+					element: (
+						<GuestGuard>
+							<SettingsPage />
 						</GuestGuard>
 					),
 				},
