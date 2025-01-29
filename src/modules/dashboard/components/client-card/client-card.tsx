@@ -15,20 +15,19 @@ export const ClientCard: React.FC<ClientCardProps> = ({ client }) => {
 				color={ColorStatus[client.status]}
 			/>
 			<div className={css.content}>
-				<div className={css.value_wrapper}>{client.hostname}</div>
+				<div className={css.column_wrapper}>{client.hostname}</div>
 				<Separator />
 				<div
-					className={css.value_wrapper}
-					data-tooltip-id={`${client.id}_tooltip_address`}
+					className={css.column_wrapper}
+					data-tooltip-id={`123_tooltip_address`}
 					data-tooltip-content={`Port: ${client.address.port}`}
 				>
 					{client.address.ip}
 				</div>
 				<Separator />
-				<div className={css.value_wrapper}>00-B0-D0-63-C2-26</div>
+				<div className={css.column_wrapper}>00-B0-D0-63-C2-26</div>
 			</div>
 			<Tooltip id={`${client.id}_tooltip_status`} />
-			<Tooltip id={`${client.id}_tooltip_address`} clickable />
 		</div>
 	);
 };

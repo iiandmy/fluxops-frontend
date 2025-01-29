@@ -15,7 +15,10 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<ReduxProvider store={appStore}>
-			<SkeletonTheme baseColor="#ADADAD" highlightColor="#CCCCCC">
+			<SkeletonTheme
+				baseColor="var(--color-light-gray-300)"
+				highlightColor="var(--color-light-gray-500)"
+			>
 				<Toaster />
 				<RouterProvider router={appRouter()} />
 			</SkeletonTheme>

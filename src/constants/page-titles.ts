@@ -1,4 +1,4 @@
-const AppName = 'FluxOps | ';
+const AppName = 'FluxOps – ';
 
 export enum PageTitle {
 	Dashboard = AppName + 'Dashboard',

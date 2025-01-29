@@ -1,3 +1,5 @@
+import { Tooltip } from 'react-tooltip';
+
 import { useClients } from '~/hooks/clients';
 
 import { ClientCard } from '../client-card';
@@ -9,15 +11,14 @@ export const ClientList = () => {
 
 	if (isLoading) return <ClientListSkeleton />;
 
-	if (clients.connections.length === 0) {
-		return <div>No connections</div>;
-	}
+	if (clients.connections.length === 0) return <div>No connections</div>;
 
 	return (
 		<div className={css.root}>
-			{clients.connections.map((connection) => (
-				<ClientCard key={connection.id} client={connection} />
+			{clients.connections.map((clientConnection) => (
+				<ClientCard key={clientConnection.id} client={clientConnection} />
 			))}
+			<Tooltip id={`123_tooltip_address`} delayShow={1500} clickable />
 		</div>
 	);
 };
