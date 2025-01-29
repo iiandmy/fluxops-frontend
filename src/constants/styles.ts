@@ -1,3 +1,3 @@
-export const StylesConst = {
-	hide_sidebar: 'hide_scrollbar',
+export const StyleConstants = {
+	hide_scrollbar: 'hide_scrollbar',
 };

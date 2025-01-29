@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { FC, ReactElement } from 'react';
 import { FaQuestion, FaRegUser } from 'react-icons/fa6';
 import { Plate } from '~/components';
-import { StylesConst } from '~/constants/styles';
+import { StyleConstants } from '~/constants/styles';
 
 import css from './client-list.module.css';
 
@@ -17,7 +17,7 @@ export const ClientList: FC<ClientListProps> = (props) => {
 			leftHeaderAddon={<FaRegUser size={20} color="#FA5252" />}
 			rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
 			contentClassName={classNames(
-				StylesConst.hide_sidebar,
+				StyleConstants.hide_scrollbar,
 				css.content_wrapper
 			)}
 			className={css.root}
