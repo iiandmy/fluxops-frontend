@@ -31,14 +31,12 @@ export const Plate: FC<PlateProps> = (props) => {
 					{props.rightHeaderAddon}
 				</div>
 			)}
-			<div
-				className={classNames(
-					css.content,
-					{ [css.pt0]: displayHeader },
-					props.contentClassName
-				)}
-			>
-				{props.children}
+			<div className={classNames(css.content, { [css.pt0]: displayHeader })}>
+				<div
+					className={classNames(css.content_wrapper, props.contentClassName)}
+				>
+					{props.children}
+				</div>
 			</div>
 		</div>
 	);
