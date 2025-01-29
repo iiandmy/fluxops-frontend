@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { FC, ReactElement } from 'react';
 import { FaQuestion, FaRegUser } from 'react-icons/fa6';
 import { Plate } from '~/components';
-import { StyleConstants } from '~/constants/styles';
+import { StyleConstants } from '~/constants';
 
 import css from './client-list.module.css';
 

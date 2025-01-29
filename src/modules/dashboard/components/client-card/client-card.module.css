@@ -8,7 +8,7 @@
 	border-color: var(--color-light-border-primary);
 	border-radius: var(--border-radius-s);
 
-	background-color: var(--color-light-bg-plate);
+	background-color: var(--color-light-bg-card);
 }
 
 .content {

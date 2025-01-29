@@ -16,3 +16,10 @@
 	align-items: center;
 	width: fit-content;
 }
+
+.placeholder {
+	width: 100px;
+	height: 20px;
+	border-radius: var(--gap-2xs);
+	background-color: var(--color-light-bg-plate);
+}
