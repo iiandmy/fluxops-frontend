@@ -10,6 +10,7 @@
 	color: var(--color-light-text-primary);
 
 	background-color: var(--color-light-bg-secondary);
+	box-shadow: 1px 1px 3px 0 #00000040;
 }
 
 .block {

@@ -1,0 +1,11 @@
+.root {
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-2xs);
+}
+
+.content_wrapper {
+	height: 100%;
+	max-height: 100%;
+}
