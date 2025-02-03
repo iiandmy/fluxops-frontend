@@ -1,47 +1,62 @@
-import { FaQuestion } from 'react-icons/fa6';
-import { GoProjectTemplate } from 'react-icons/go';
-import { SlChart } from 'react-icons/sl';
-import { TbLogs } from 'react-icons/tb';
-import { Plate } from '~/components';
+import { FaRegCircle } from 'react-icons/fa6';
+import { GenericWrapper, Section } from '~/components';
 import { PageTitle } from '~/constants';
 import { useTitle } from '~/hooks';
 
-import { Clients } from '../widgets';
+import { Connections } from '../widgets';
 import css from './page.module.css';
 
 export const DashboardPage = () => {
 	useTitle(PageTitle.Dashboard);
 
 	return (
-		<div className={css.root}>
-			<div className={css.grid}>
+		<GenericWrapper>
+			<div className={css.wrapper}>
+				<Section
+					title="Connections"
+					foldable
+					innerHeaderAddon={
+						<div
+							style={{
+								display: 'flex',
+								gap: '12px',
+								paddingLeft: '28px',
+								fontSize: '22px',
+								fontWeight: '200',
+							}}
+						>
+							<div style={{ color: '#D59898' }}>10</div>
+							<div style={{ color: '#98D5A3' }}>9</div>
+						</div>
+					}
+					rightHeaderAddon={<FaRegCircle color="var(--color-icon-muted)" />}
+				>
+					<Connections />
+				</Section>
 				<div>
-					<Clients />
-				</div>
-				<div className={css.right_widget_group}>
-					<Plate
-						block={true}
-						leftHeaderAddon={<SlChart size={24} color={'red'} />}
-						rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
+					<Section
+						title="Connections"
+						foldable
+						innerHeaderAddon={
+							<div
+								style={{
+									display: 'flex',
+									gap: '12px',
+									paddingLeft: '28px',
+									fontSize: '22px',
+									fontWeight: '200',
+								}}
+							>
+								<div style={{ color: '#D59898' }}>10</div>
+								<div style={{ color: '#98D5A3' }}>9</div>
+							</div>
+						}
+						rightHeaderAddon={<FaRegCircle color="var(--color-icon-muted)" />}
 					>
-						Load
-					</Plate>
-					<Plate
-						block={true}
-						leftHeaderAddon={<GoProjectTemplate size={28} color={'red'} />}
-						rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
-					>
-						Templates
-					</Plate>
-					<Plate
-						block={true}
-						leftHeaderAddon={<TbLogs size={28} color={'red'} />}
-						rightHeaderAddon={<FaQuestion size={20} color="#737373" />}
-					>
-						Logs
-					</Plate>
+						bebra
+					</Section>
 				</div>
 			</div>
-		</div>
+		</GenericWrapper>
 	);
 };

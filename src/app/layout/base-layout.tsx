@@ -1,5 +1,3 @@
-import { Header, Layout, Sidebar } from '~/components';
+import { Header, Layout } from '~/components';
 
-export const BaseLayout = (
-	<Layout sidebarSlot={<Sidebar />} headerSlot={<Header />} />
-);
+export const BaseLayout = <Layout headerSlot={<Header />} />;

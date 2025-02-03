@@ -1,0 +1,5 @@
+.list_wrapper {
+	overflow: auto;
+	max-height: 78vh;
+	margin-top: 20px;
+}

@@ -1,0 +1,27 @@
+.wrapper {
+	display: flex;
+	gap: 24px;
+	margin-left: 50px;
+}
+
+.item_wrapper {
+	padding: 2px 14px 6px;
+	border: none;
+
+	font-size: 16px;
+	font-weight: 300;
+	color: var(--color-light-text-cornflower);
+
+	background-color: transparent;
+
+	transition: background-color 0.3s;
+}
+
+.item_wrapper:hover {
+	cursor: pointer;
+	background-color: var(--color-light-bg-cornflower);
+}
+
+.item_active {
+	background-color: var(--color-light-bg-cornflower);
+}

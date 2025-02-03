@@ -1,2 +1,2 @@
-export { ClientCard } from './client-card';
-export { ClientList } from './client-list';
+export { ConnectionFilters } from './connection-filters/connection-filters';
+export { ConnectionList } from './connection-list/connection-list';

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,15 +9,27 @@
 }
 
 body {
+	font-family: 'Geologica', serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+
 	overflow: hidden;
 	max-height: 100vh;
 	height: 100vh;
-	background-color: var(--color-light-bg-body);
+	background-color: var(--color-white);
 }
 
 a {
 	text-decoration: none;
 	color: var(--color-light-text-primary-inverted);
+}
+
+a,
+button,
+input {
+	font-family: inherit;
+	font-weight: inherit;
 }
 
 .hide_scrollbar {
@@ -28,10 +42,6 @@ a {
 }
 
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
-
 	color-scheme: light dark;
 
 	font-synthesis: none;
@@ -67,10 +77,17 @@ a {
 }
 
 :root {
+	--color-light-bg-card-muted: #fbfbfb;
+	--color-light-bg-cornflower: rgba(7, 67, 245, 5%);
+	--color-light-text-cornflower: rgba(0, 12, 141, 50%);
+	--color-light-text-muted: rgba(0, 0, 0, 50%);
+	--color-icon-muted: #808080;
+	--color-white: #ffffff;
 	--color-light-gray-500: #adadad;
 	--color-light-gray-300: #cecece;
-	--color-status-success: #5cb85c;
-	--color-status-failure: #d63124;
+	--color-status-success: #98d5a3;
+	--color-status-pending: #f5ec6b;
+	--color-status-failure: #d59898;
 	--color-light-bg-button: #ffffff;
 	--color-dark-status-muted-alt-info-press: #38476c;
 	--color-light-bg-header: #383c49;

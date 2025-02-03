@@ -1,0 +1,15 @@
+.wrapper {
+	padding: 4px 32px 16px 50px;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+.wrapper:nth-child(odd) {
+	background-color: var(--color-light-bg-card-muted);
+}
+
+.footer_wrapper {
+	display: flex;
+	gap: 12px;
+	color: var(--color-light-text-muted);
+}
