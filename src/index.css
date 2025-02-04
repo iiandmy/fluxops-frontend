@@ -19,6 +19,7 @@ body {
 	max-height: 100vh;
 	height: 100vh;
 	background-color: var(--color-white);
+	color: var(--color-light-text-primary);
 }
 
 #root {
@@ -27,7 +28,10 @@ body {
 
 a {
 	text-decoration: none;
-	color: var(--color-light-text-primary-inverted);
+}
+
+li {
+	list-style: none;
 }
 
 a,
