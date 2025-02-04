@@ -1,0 +1,9 @@
+.header {
+	padding: 26px 8px 0 0;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-s);
+}

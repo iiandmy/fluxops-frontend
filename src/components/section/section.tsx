@@ -24,12 +24,13 @@ export const Section: FC<SectionProps> = ({
 	rightHeaderAddon,
 	innerHeaderAddon,
 	children,
+	headerClassName,
 }) => {
 	const [expanded, setExpanded] = useState(true);
 
 	return (
 		<div className={cn(css.wrapper, className)}>
-			<div className={css.header_wrapper}>
+			<div className={cn(css.header_wrapper, headerClassName)}>
 				<div className={css.title_wrapper}>
 					{leftHeaderAddon}
 					<div className={css.title}>{title}</div>
