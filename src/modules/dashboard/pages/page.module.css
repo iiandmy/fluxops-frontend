@@ -1,19 +1,6 @@
 .wrapper {
 	display: grid;
 	grid-auto-rows: 100%;
-	grid-template-columns: 1fr 1.2fr;
+	grid-template-columns: 4fr 5fr;
 	height: 100%;
-}
-
-.right_widget_group {
-	display: flex;
-	flex-direction: row;
-	gap: var(--gap-s);
-	height: 100%;
-}
-
-@media only screen and (width <= 1440px) {
-	.right_widget_group {
-		flex-direction: column;
-	}
 }

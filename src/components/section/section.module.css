@@ -6,8 +6,6 @@
 	width: 100%;
 	min-width: 420px;
 	height: 100%;
-
-	/* background-color: rgb(245, 245, 71); */
 }
 
 .header_wrapper {
@@ -41,4 +39,8 @@
 .icon {
 	font-size: 18px;
 	transition: rotate 0.3s;
+}
+
+.icon_expand {
+	rotate: 180deg;
 }

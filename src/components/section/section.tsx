@@ -1,5 +1,6 @@
+import cn from 'classnames';
 import { ComponentProps, FC, ReactElement, useState } from 'react';
-import { MdOutlineArrowBackIos } from 'react-icons/md';
+import { FaChevronUp } from 'react-icons/fa6';
 
 import css from './section.module.css';
 
@@ -32,13 +33,10 @@ export const Section: FC<SectionProps> = ({
 					{leftHeaderAddon}
 					<div className={css.title}>{title}</div>
 					{foldable && (
-						<MdOutlineArrowBackIos
-							className={css.icon}
-							color="var(--color-icon-muted)"
+						<FaChevronUp
 							onClick={() => setExpanded((p) => !p)}
-							style={{
-								rotate: expanded ? '-90deg' : '-270deg',
-							}}
+							className={cn(css.icon, { [css.icon_expand]: expanded })}
+							color="var(--color-icon-muted)"
 						/>
 					)}
 				</div>
