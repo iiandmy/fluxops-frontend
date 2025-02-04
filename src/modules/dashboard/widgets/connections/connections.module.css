@@ -1,5 +1,9 @@
 .wrapper {
 	overflow: hidden;
-	max-height: 100%;
-	margin-top: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	height: 100%;
+	padding-top: 22px;
 }

@@ -1,6 +1,6 @@
 .generic_wrapper {
 	width: 100%;
 	max-width: 1280px;
-	max-height: 100%;
+	height: 100%;
 	margin: auto;
 }
