@@ -4,17 +4,28 @@ import { FaChevronUp } from 'react-icons/fa6';
 
 import css from './section.module.css';
 
-interface SectionProps extends ComponentProps<'div'> {
-	foldable?: boolean;
-	title: string;
-	leftHeaderAddon?: ReactElement;
-	rightHeaderAddon?: ReactElement;
-	innerHeaderAddon?: ReactElement;
+interface ISectionStyleProps {
 	headerClassName?: string;
 	titleClassName?: string;
 	rightAddonClassName?: string;
 	bodyClassName?: string;
 }
+
+interface ISectionAddonProps {
+	leftHeaderAddon?: ReactElement;
+	rightHeaderAddon?: ReactElement;
+	innerHeaderAddon?: ReactElement;
+}
+
+interface ISectionOwnProps {
+	foldable?: boolean;
+	title: string;
+}
+
+type SectionProps = ISectionOwnProps &
+	ISectionAddonProps &
+	ISectionStyleProps &
+	ComponentProps<'div'>;
 
 export const Section: FC<SectionProps> = ({
 	foldable = false,
@@ -37,7 +48,6 @@ export const Section: FC<SectionProps> = ({
 						<FaChevronUp
 							onClick={() => setExpanded((p) => !p)}
 							className={cn(css.icon, { [css.icon_expand]: expanded })}
-							color="var(--color-icon-muted)"
 						/>
 					)}
 				</div>

@@ -3,13 +3,13 @@ import { RootState } from '~/store';
 
 import { sessionApi } from '~/api/session';
 
-interface SessionSliceState {
+interface ISessionSliceState {
 	isAuthorized: boolean;
 	accessToken?: string;
 	userId?: string;
 }
 
-const initialState: SessionSliceState = {
+const initialState: ISessionSliceState = {
 	isAuthorized: false,
 	accessToken: '',
 	userId: '',
@@ -28,7 +28,7 @@ export const sessionSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addMatcher(
 			sessionApi.endpoints.login.matchFulfilled,
-			(state: SessionSliceState, { payload }) => {
+			(state: ISessionSliceState, { payload }) => {
 				state.isAuthorized = true;
 
 				state.userId = payload.userId;

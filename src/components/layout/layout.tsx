@@ -3,13 +3,13 @@ import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 import css from './layout.module.css';
 
-interface LayoutProps extends PropsWithChildren {
+interface ILayoutProps extends PropsWithChildren {
 	headerSlot?: ReactNode;
 	footerSlot?: ReactNode;
 	sidebarSlot?: ReactNode;
 }
 
-export const Layout: FC<LayoutProps> = (props) => (
+export const Layout: FC<ILayoutProps> = (props) => (
 	<div className={css.wrapper}>
 		{props.headerSlot}
 		<main className={css.content_wrapper}>

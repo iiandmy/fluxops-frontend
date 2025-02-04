@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Client } from '~/store/clients';
 
-import { ConnectionCard } from '../connection-card/connection-card';
+import { ConnectionCard } from './connection-card';
 import css from './connection-list.module.css';
 import { ConnectionListSkeleton } from './connection-list.skeleton';
 

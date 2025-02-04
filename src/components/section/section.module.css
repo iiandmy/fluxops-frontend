@@ -38,7 +38,12 @@
 
 .icon {
 	font-size: 18px;
+	color: var(--color-icon-muted);
 	transition: rotate 0.3s;
+}
+
+.icon:hover {
+	cursor: pointer;
 }
 
 .icon_expand {

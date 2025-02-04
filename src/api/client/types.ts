@@ -1,11 +1,11 @@
-export interface ClientDto {
+export type ClientDto = {
 	id: string;
 	ip: string;
 	port: number;
 	status: 'active' | 'inactive';
 	hostname: string;
-}
+};
 
-export interface FetchClientsResponse {
+export type FetchClientsResponse = {
 	[key: string]: ClientDto;
-}
+};
