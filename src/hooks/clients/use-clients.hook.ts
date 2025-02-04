@@ -4,7 +4,7 @@ import { useFetchClientsQuery } from '~/api/client';
 
 import { selectClients } from '~/store/clients';
 
-import { useAppSelector } from '../hooks';
+import { useAppSelector } from '../redux-hooks';
 
 export const useClients = () => {
 	const clients = useAppSelector(selectClients);
