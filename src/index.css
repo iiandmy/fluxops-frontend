@@ -86,27 +86,30 @@ input {
 }
 
 :root {
-	--color-light-bg-card-muted: #fbfbfb;
+	/* light */
+
 	--color-light-bg-cornflower: rgba(7, 67, 245, 5%);
 	--color-light-text-cornflower: rgba(0, 12, 141, 50%);
 	--color-light-text-muted: rgba(0, 0, 0, 50%);
+	--color-light-bg-card: #e2e7eb;
+	--color-light-bg-card-muted: #fbfbfb;
+	--color-light-specialbg-tertiary-transparent: rgba(30, 43, 68, 0.08);
+	--color-light-text-primary: rgba(3, 3, 6, 0.88);
+	--color-light-bg-button: #ffffff;
+
+	/* dark */
+	--color-dark-status-muted-alt-info-press: #38476c;
+}
+
+:root {
+	/* common */
+
 	--color-icon-muted: #808080;
 	--color-white: #ffffff;
+	--color-black: #000000;
 	--color-light-gray-500: #adadad;
 	--color-light-gray-300: #cecece;
 	--color-status-success: #98d5a3;
 	--color-status-pending: #f5ec6b;
 	--color-status-failure: #d59898;
-	--color-light-bg-button: #ffffff;
-	--color-dark-status-muted-alt-info-press: #38476c;
-	--color-light-bg-header: #383c49;
-	--color-light-bg-plate: #f3f3f3;
-	--color-light-bg-card: #e2e7eb;
-	--color-light-bg-info: #d6e8fc;
-	--color-light-bg-body: #cecece;
-	--color-light-bg-secondary: #f2f3f5;
-	--color-light-specialbg-tertiary-transparent: rgba(30, 43, 68, 0.08);
-	--color-light-text-primary: rgba(3, 3, 6, 0.88);
-	--color-light-neutral-0-hover: #e7e8eb;
-	--color-light-border-primary: #d5d6dc;
 }
