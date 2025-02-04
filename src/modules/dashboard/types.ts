@@ -1,6 +1,8 @@
-export type ValueType = string | number;
+import { ClientStatus } from '~/store/clients';
 
-export type Filter = {
+export type Filter<T> = {
 	label: string;
-	value: ValueType;
+	value: T;
 };
+
+export type ClientFilter = Filter<ClientStatus>;

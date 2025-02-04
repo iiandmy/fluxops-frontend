@@ -10,7 +10,7 @@ export const __mockClients_: { connections: Client[] } = {
 		},
 		{
 			id: 'c353712c-c066-452e-b964-7e313a3e5a68',
-			status: 'active',
+			status: 'waiting',
 			address: { ip: '172.110.17.44', port: '7786' },
 			hostname: 'RIT44-wh',
 		},
@@ -82,7 +82,7 @@ export const __mockClients_: { connections: Client[] } = {
 		},
 		{
 			id: '0106580f-570f-4b89-9eee-31fb6c3b8957',
-			status: 'active',
+			status: 'waiting',
 			address: { ip: '172.110.17.44', port: '7786' },
 			hostname: 'RIT44-wh',
 		},
@@ -118,7 +118,7 @@ export const __mockClients_: { connections: Client[] } = {
 		},
 		{
 			id: 'df837ad1-29d8-4b0a-a13f-c2b6151b6f34',
-			status: 'active',
+			status: 'waiting',
 			address: { ip: '172.110.17.44', port: '7786' },
 			hostname: 'RIT44-wh',
 		},
@@ -136,7 +136,7 @@ export const __mockClients_: { connections: Client[] } = {
 		},
 		{
 			id: 'f76fcf59-862b-4b8d-8a49-0f9430df103c',
-			status: 'inactive',
+			status: 'waiting',
 			address: { ip: '172.110.17.72', port: '8721' },
 			hostname: 'RIT72-wh',
 		},

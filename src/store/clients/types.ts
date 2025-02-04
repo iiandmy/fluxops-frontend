@@ -5,4 +5,4 @@ export interface Client {
 	hostname: string;
 }
 
-export type ClientStatus = 'active' | 'inactive';
+export type ClientStatus = 'active' | 'inactive' | 'waiting';

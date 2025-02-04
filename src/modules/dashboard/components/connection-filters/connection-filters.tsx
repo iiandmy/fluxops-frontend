@@ -1,18 +1,19 @@
 import cn from 'classnames';
-import { FC } from 'react';
+import { ComponentProps, FC } from 'react';
 
-import { Filter } from '~/modules/dashboard/types';
+import { ClientFilter } from '~/modules/dashboard/types';
 
 import css from './connection-filters.module.css';
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
 
 interface IConnectionFiltersProps {
-	values: Filter[];
-	activeFilter?: Pick<Filter, 'value'>;
+	values: ClientFilter[];
+	activeFilter?: ClientFilter;
 	showSkeleton: boolean;
+	onFilterChange: (f: ClientFilter) => void;
 }
 
-interface IConnectionFilterProps {
+interface IConnectionFilterProps extends ComponentProps<'button'> {
 	label: string;
 	isActive: boolean;
 }
@@ -20,8 +21,12 @@ interface IConnectionFilterProps {
 const ConnectionFilterItem: FC<IConnectionFilterProps> = ({
 	label,
 	isActive,
+	...props
 }) => (
-	<button className={cn({ [css.item_active]: isActive }, css.item_wrapper)}>
+	<button
+		className={cn({ [css.item_active]: isActive }, css.item_wrapper)}
+		{...props}
+	>
 		{label}
 	</button>
 );
@@ -30,6 +35,7 @@ export const ConnectionFilters: FC<IConnectionFiltersProps> = ({
 	values,
 	activeFilter,
 	showSkeleton,
+	onFilterChange,
 }) => {
 	if (showSkeleton) return <ConnectionFiltersSkeleton />;
 
@@ -39,6 +45,7 @@ export const ConnectionFilters: FC<IConnectionFiltersProps> = ({
 				<ConnectionFilterItem
 					key={filter.value}
 					label={filter.label}
+					onClick={() => onFilterChange(filter)}
 					isActive={
 						activeFilter !== undefined && activeFilter.value === filter.value
 					}
