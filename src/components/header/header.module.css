@@ -10,6 +10,12 @@
 	justify-content: space-between;
 }
 
+.content_container {
+	display: flex;
+	gap: var(--gap-l);
+	align-items: center;
+}
+
 .nav {
 	display: flex;
 	gap: 50px;
