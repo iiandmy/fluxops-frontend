@@ -1,8 +1,6 @@
 import { ClientStatus } from '~/store/clients';
 
-export type Filter<T> = {
-	label: string;
-	value: T;
-};
+import { BaseFilter, LabeledFilter } from '~/utils/types';
 
-export type ClientFilter = Filter<ClientStatus>;
+export type ClientLabeledFilter = LabeledFilter<ClientStatus>;
+export type ClientFilter = BaseFilter<ClientStatus>;

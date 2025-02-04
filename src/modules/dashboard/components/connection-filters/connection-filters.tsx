@@ -1,16 +1,16 @@
 import cn from 'classnames';
 import { ComponentProps, FC } from 'react';
 
-import { ClientFilter } from '~/modules/dashboard/types';
+import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
 
 import css from './connection-filters.module.css';
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
 
 interface IConnectionFiltersProps {
-	values: ClientFilter[];
+	values: ClientLabeledFilter[];
 	activeFilter?: ClientFilter;
 	showSkeleton: boolean;
-	onFilterChange: (f: ClientFilter) => void;
+	onFilterChange: (f: ClientLabeledFilter) => void;
 }
 
 interface IConnectionFilterProps extends ComponentProps<'button'> {

@@ -1,52 +1,46 @@
-import { useState } from 'react';
+import { FaRegCircle } from 'react-icons/fa6';
+import { Section } from '~/components';
+import { useFilter } from '~/hooks';
 
 import {
 	ConnectionFilters,
 	ConnectionList,
 } from '~/modules/dashboard/components';
-import { ClientFilter } from '~/modules/dashboard/types';
+
+import { ClientStatus } from '~/store/clients';
 
 import { useClients } from '~/hooks/clients';
 
+import { ConnectionSummary } from '../../components/connection-summary';
+import { filters } from './connections.config';
 import css from './connections.module.css';
 
-const filterConfig: ClientFilter[] = [
-	{
-		label: 'Active',
-		value: 'active',
-	},
-	{
-		label: 'Inactive',
-		value: 'inactive',
-	},
-	{
-		label: 'Waiting',
-		value: 'waiting',
-	},
-];
-
 export const Connections = () => {
-	const [activeFilter, setActiveFilter] = useState<ClientFilter | undefined>();
-	const { clients, isLoading } = useClients(activeFilter?.value);
-
-	const handleChangeFilter = (newFilter: ClientFilter) => {
-		if (newFilter?.value === activeFilter?.value) {
-			setActiveFilter(undefined);
-			return;
-		}
-
-		setActiveFilter(newFilter);
-	};
+	const { activeFilter, updateActiveFilter } = useFilter<ClientStatus>();
+	const { clients, totalActiveClients, totalInactiveClients, isLoading } =
+		useClients(activeFilter?.value);
 
 	return (
-		<div className={css.wrapper}>
-			<ConnectionFilters
-				values={filterConfig}
-				activeFilter={activeFilter}
-				onFilterChange={handleChangeFilter}
-				showSkeleton={isLoading}
-			/>
-			<ConnectionList items={clients} showSkeleton={isLoading} />
-		</div>
+		<Section
+			title="Connections"
+			innerHeaderAddon={
+				<ConnectionSummary
+					showSkeleton={isLoading}
+					totalActiveConnections={totalActiveClients}
+					totalInactiveConnections={totalInactiveClients}
+				/>
+			}
+			rightHeaderAddon={<FaRegCircle color="var(--color-icon-muted)" />}
+		>
+			<div className={css.wrapper}>
+				<ConnectionFilters
+					values={filters}
+					activeFilter={activeFilter}
+					onFilterChange={updateActiveFilter}
+					showSkeleton={isLoading}
+				/>
+				<ConnectionList items={clients} showSkeleton={isLoading} />
+			</div>
+		</Section>
 	);
 };

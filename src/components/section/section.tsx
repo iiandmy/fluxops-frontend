@@ -19,6 +19,7 @@ interface SectionProps extends ComponentProps<'div'> {
 export const Section: FC<SectionProps> = ({
 	foldable = false,
 	title,
+	className,
 	leftHeaderAddon,
 	rightHeaderAddon,
 	innerHeaderAddon,
@@ -27,7 +28,7 @@ export const Section: FC<SectionProps> = ({
 	const [expanded, setExpanded] = useState(true);
 
 	return (
-		<div className={css.wrapper}>
+		<div className={cn(css.wrapper, className)}>
 			<div className={css.header_wrapper}>
 				<div className={css.title_wrapper}>
 					{leftHeaderAddon}
