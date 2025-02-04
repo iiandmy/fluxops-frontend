@@ -11,6 +11,12 @@
 	padding-left: 50px;
 }
 
+.content_container {
+	display: flex;
+	gap: var(--gap-l);
+	align-items: center;
+}
+
 .nav {
 	display: flex;
 	gap: 50px;
