@@ -1,12 +1,15 @@
 import cn from 'classnames';
 import { FC } from 'react';
 
-import { Filter } from '../types';
+import { Filter } from '~/modules/dashboard/types';
+
 import css from './connection-filters.module.css';
+import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
 
 interface IConnectionFiltersProps {
 	values: Filter[];
 	activeFilter?: Pick<Filter, 'value'>;
+	showSkeleton: boolean;
 }
 
 interface IConnectionFilterProps {
@@ -26,16 +29,21 @@ const ConnectionFilterItem: FC<IConnectionFilterProps> = ({
 export const ConnectionFilters: FC<IConnectionFiltersProps> = ({
 	values,
 	activeFilter,
-}) => (
-	<div className={css.wrapper}>
-		{values.map((filter) => (
-			<ConnectionFilterItem
-				key={filter.value}
-				label={filter.label}
-				isActive={
-					activeFilter !== undefined && activeFilter.value === filter.value
-				}
-			/>
-		))}
-	</div>
-);
+	showSkeleton,
+}) => {
+	if (showSkeleton) return <ConnectionFiltersSkeleton />;
+
+	return (
+		<div className={css.wrapper}>
+			{values.map((filter) => (
+				<ConnectionFilterItem
+					key={filter.value}
+					label={filter.label}
+					isActive={
+						activeFilter !== undefined && activeFilter.value === filter.value
+					}
+				/>
+			))}
+		</div>
+	);
+};

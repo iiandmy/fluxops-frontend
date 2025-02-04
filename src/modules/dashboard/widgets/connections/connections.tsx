@@ -10,15 +10,15 @@ import css from './connections.module.css';
 const filterConfig = [
 	{
 		label: 'Active',
-		value: 'a',
+		value: 'active',
 	},
 	{
 		label: 'Inactive',
-		value: 'i',
+		value: 'inactive',
 	},
 	{
 		label: 'Waiting',
-		value: 'w',
+		value: 'waiting',
 	},
 ];
 
@@ -27,7 +27,11 @@ export const Connections = () => {
 
 	return (
 		<div className={css.wrapper}>
-			<ConnectionFilters values={filterConfig} activeFilter={{ value: 'a' }} />
+			<ConnectionFilters
+				values={filterConfig}
+				activeFilter={{ value: 'a' }}
+				showSkeleton={isLoading}
+			/>
 			<ConnectionList items={clients.connections} showSkeleton={isLoading} />
 		</div>
 	);
