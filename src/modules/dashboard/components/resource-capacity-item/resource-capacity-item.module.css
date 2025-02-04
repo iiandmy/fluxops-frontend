@@ -11,8 +11,8 @@
 
 	background: repeating-linear-gradient(
 		to right,
-		#ececec,
-		#ececec 1px,
+		var(--color-light-gray-100),
+		var(--color-light-gray-100) 1px,
 		#fff 2px,
 		#fff 4px
 	);

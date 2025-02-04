@@ -107,8 +107,9 @@ input {
 	--color-icon-muted: #808080;
 	--color-white: #ffffff;
 	--color-black: #000000;
-	--color-light-gray-500: #adadad;
+	--color-light-gray-100: #ececec;
 	--color-light-gray-300: #cecece;
+	--color-light-gray-500: #adadad;
 	--color-status-success: #98d5a3;
 	--color-status-pending: #f5ec6b;
 	--color-status-failure: #d59898;

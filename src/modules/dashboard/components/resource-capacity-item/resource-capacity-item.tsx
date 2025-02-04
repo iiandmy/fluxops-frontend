@@ -7,11 +7,13 @@ import { CapacityItem } from '~/utils/mocks';
 
 import css from './resource-capacity-item.module.css';
 
-interface Props {
+interface ResourceCapacityItemProps {
 	item: CapacityItem;
 }
 
-export const ResourceCapacityItem: FC<Props> = ({ item }) => (
+export const ResourceCapacityItem: FC<ResourceCapacityItemProps> = ({
+	item,
+}) => (
 	<div>
 		<h2 className={css.header}>
 			{item.name} {item.capacity}%
