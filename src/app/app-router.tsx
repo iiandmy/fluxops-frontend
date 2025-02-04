@@ -22,9 +22,7 @@ const GuestGuard = ({ children }: GuestGuardedProps) => {
 	// MOCK
 	const isAuthorized = useAppSelector(selectIsAuthorized);
 
-	if (!isAuthorized) {
-		return <Navigate to="/login" />;
-	}
+	if (!isAuthorized) return <Navigate to="/login" />;
 
 	return children;
 };
@@ -36,9 +34,7 @@ type AuthGuardedProps = {
 const AuthGuard = ({ children }: AuthGuardedProps) => {
 	const isAuthorized = useAppSelector(selectIsAuthorized);
 
-	if (isAuthorized) {
-		return <Navigate to="/" />;
-	}
+	if (isAuthorized) return <Navigate to="/" />;
 
 	return children;
 };
@@ -48,9 +44,7 @@ export const appRouter = () =>
 		{
 			element: BaseLayout,
 			errorElement: <div>error</div>,
-			loader: async () => {
-				return await (<>123</>);
-			},
+			loader: async () => await (<>123</>),
 			children: [
 				{
 					path: AppRoutes.Login,

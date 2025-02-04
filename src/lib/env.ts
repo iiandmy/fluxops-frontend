@@ -16,9 +16,7 @@ try {
 } catch (err: unknown) {
 	console.warn('Check schema in lib/env');
 
-	if (err instanceof ZodError) {
-		console.warn(err.errors);
-	}
+	if (err instanceof ZodError) console.warn(err.errors);
 
 	throw err;
 }

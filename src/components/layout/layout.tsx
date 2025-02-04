@@ -9,18 +9,16 @@ interface LayoutProps extends PropsWithChildren {
 	sidebarSlot?: ReactNode;
 }
 
-export const Layout: FC<LayoutProps> = (props) => {
-	return (
-		<div className={css.wrapper}>
-			{props.headerSlot}
-			<main className={css.content_wrapper}>
-				{props.sidebarSlot}
-				<div className={css.container}>
-					<Outlet />
-				</div>
-				{props.footerSlot}
-				<ScrollRestoration />
-			</main>
-		</div>
-	);
-};
+export const Layout: FC<LayoutProps> = (props) => (
+	<div className={css.wrapper}>
+		{props.headerSlot}
+		<main className={css.content_wrapper}>
+			{props.sidebarSlot}
+			<div className={css.container}>
+				<Outlet />
+			</div>
+			{props.footerSlot}
+			<ScrollRestoration />
+		</main>
+	</div>
+);

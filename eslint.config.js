@@ -57,6 +57,9 @@ export default tseslint.config(
 					ignoreRestSiblings: true,
 				},
 			],
+			curly: ['error', 'multi-or-nest'],
+			'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+			'arrow-body-style': ['error', 'as-needed'],
 		},
 	}
 );
