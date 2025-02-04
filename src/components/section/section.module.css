@@ -47,5 +47,5 @@
 }
 
 .icon_expand {
-	rotate: 180deg;
+	rotate: -180deg;
 }

@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { ComponentProps, FC, ReactElement, useState } from 'react';
-import { FaChevronUp } from 'react-icons/fa6';
+import { FaChevronDown } from 'react-icons/fa6';
 
 import css from './section.module.css';
 
@@ -46,7 +46,7 @@ export const Section: FC<SectionProps> = ({
 					{leftHeaderAddon}
 					<div className={css.title}>{title}</div>
 					{foldable && (
-						<FaChevronUp
+						<FaChevronDown
 							onClick={() => setExpanded((p) => !p)}
 							className={cn(css.icon, { [css.icon_expand]: expanded })}
 						/>
