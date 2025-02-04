@@ -15,7 +15,7 @@ export const baseQuery: BaseQueryFn<
 	FetchBaseQueryMeta
 > = fetchBaseQuery({
 	baseUrl: env.VITE_SERVER_API_URL,
-	prepareHeaders: (headers) => {
+	prepareHeaders: (headers) =>
 		// Middleware to enrich with JWT Token
 
 		// const { accessToken } = getState().session;
@@ -24,8 +24,5 @@ export const baseQuery: BaseQueryFn<
 		//   headers.set('Authorization', `Bearer ${accessToken}`);
 		// }
 
-		return headers;
-	},
+		headers,
 });
-
-console.log(env.VITE_SERVER_API_URL);
