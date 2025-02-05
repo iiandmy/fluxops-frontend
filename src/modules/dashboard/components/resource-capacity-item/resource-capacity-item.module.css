@@ -11,10 +11,10 @@
 
 	background: repeating-linear-gradient(
 		to right,
-		var(--color-light-gray-100),
-		var(--color-light-gray-100) 1px,
-		#fff 2px,
-		#fff 4px
+		var(--color-light-bg-muted),
+		var(--color-light-bg-muted) 1px,
+		var(--color-light-bg-primary) 2px,
+		var(--color-light-bg-primary) 4px
 	);
 
 	animation: expand-width 0.5s ease-in-out forwards;

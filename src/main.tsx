@@ -10,18 +10,21 @@ import { appRouter } from '~/app/app-router';
 
 import { appStore } from '~/store/app-store';
 
-import './index.css';
+import '~/styles/index.css';
+import { ThemeProvider } from '~/styles/providers';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<ReduxProvider store={appStore}>
-			<SkeletonTheme
-				baseColor="var(--color-light-gray-300)"
-				highlightColor="var(--color-light-gray-500)"
-			>
-				<Toaster />
-				<RouterProvider router={appRouter()} />
-			</SkeletonTheme>
+			<ThemeProvider>
+				<SkeletonTheme
+					baseColor="var(--color-light-gray-300)"
+					highlightColor="var(--color-light-gray-500)"
+				>
+					<Toaster />
+					<RouterProvider router={appRouter()} />
+				</SkeletonTheme>
+			</ThemeProvider>
 		</ReduxProvider>
 	</StrictMode>
 );
