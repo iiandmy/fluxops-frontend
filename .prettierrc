@@ -17,6 +17,7 @@
 		"^~/utils/(.*)$",
 		"^~/hooks/(.*)$",
 		"^~/lib/(.*)$",
+		"^~/styles/(.*)$",
 		"^[./]"
 	],
 	"importOrderSeparation": true,

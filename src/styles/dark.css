@@ -1,0 +1,13 @@
+.dark {
+	/* background */
+
+	--color-light-bg-primary: var(--color-dark-bg-primary);
+	--color-light-bg-table-accent: var(--color-dark-bg-table-accent);
+	--color-light-bg-button-primary: var(--color-dark-bg-button-primary);
+
+	/* text */
+
+	--color-light-text-primary: var(--color-dark-text-primary);
+	--color-light-text-secondary: var(--color-dark-text-secondary);
+	--color-light-text-button: var(--color-dark-text-button);
+}

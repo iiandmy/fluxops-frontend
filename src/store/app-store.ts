@@ -9,6 +9,7 @@ export const makeStore = () => {
 		reducer: rootReducer,
 		middleware: (getDefaultMiddleware) =>
 			getDefaultMiddleware().concat(baseApi.middleware),
+		devTools: true,
 	});
 
 	setupListeners(store.dispatch);
