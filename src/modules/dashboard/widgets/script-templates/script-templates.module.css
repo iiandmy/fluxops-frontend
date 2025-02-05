@@ -1,0 +1,7 @@
+.header {
+	padding: var(--gap-xl) var(--gap-xs) 0 0;
+}
+
+.templates_wrapper {
+	padding: var(--gap-l) var(--gap-2xs);
+}

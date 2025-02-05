@@ -1,0 +1,32 @@
+.wrapper {
+	padding: 4px 32px 16px 50px;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+.wrapper:nth-child(odd) {
+	background-color: var(--color-light-bg-table-accent);
+}
+
+.footer_wrapper {
+	display: flex;
+	gap: 12px;
+	color: var(--color-light-text-secondary);
+}
+
+.upper_text_wrapper {
+	display: flex;
+	gap: 8px;
+}
+
+.active {
+	color: var(--color-status-success);
+}
+
+.inactive {
+	color: var(--color-status-failure);
+}
+
+.waiting {
+	color: var(--color-status-pending);
+}

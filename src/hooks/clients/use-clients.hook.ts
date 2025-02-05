@@ -2,11 +2,11 @@ import { useMemo } from 'react';
 
 import { useFetchClientsQuery } from '~/api/client';
 
-import { selectClients } from '~/store/clients';
+import { ClientStatus, selectClients } from '~/store/clients';
 
-import { useAppSelector } from '../hooks';
+import { useAppSelector } from '../redux-hooks';
 
-export const useClients = () => {
+export const useClients = (filter?: ClientStatus) => {
 	const clients = useAppSelector(selectClients);
 	const { isLoading } = useFetchClientsQuery();
 
@@ -22,8 +22,18 @@ export const useClients = () => {
 		[clients.connections]
 	);
 
+	const filteredClients = useMemo(
+		() =>
+			filter
+				? clients.connections.filter(
+						(connection) => connection.status === filter
+					)
+				: clients.connections,
+		[filter, clients.connections]
+	);
+
 	return {
-		clients,
+		clients: filteredClients,
 
 		totalActiveClients,
 		totalInactiveClients,

@@ -1,0 +1,50 @@
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	min-width: 420px;
+}
+
+.header_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 26px 8px 0 50px;
+}
+
+.title_wrapper {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.title {
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.inner_addon_wrapper {
+	flex: 1;
+}
+
+.body_wrapper {
+	overflow: hidden;
+	flex: 1;
+	padding: 4px 0 8px;
+}
+
+.icon {
+	font-size: 18px;
+	color: var(--color-icon-muted);
+	transition: rotate 0.3s;
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+.icon_expand {
+	rotate: -180deg;
+}

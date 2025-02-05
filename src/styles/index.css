@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: background-color 0.3s linear;
+}
+
+html,
+body {
+	overflow: hidden;
+
+	height: 100vh;
+	max-height: 100vh;
+
+	font-family: Geologica, serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+#root {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+button,
+input {
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+.hide_scrollbar {
+	scrollbar-width: none; /* Firefox */
+
+	-ms-overflow-style: none; /* IE and Edge */
+
+	/* Hide in webkit browsers */
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+:root {
+	scroll-behavior: smooth;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+
+	color-scheme: light dark;
+
+	font-synthesis: none;
+}
+
+:root {
+	/* border radius */
+
+	--border-radius-s: 6px;
+	--border-radius-m: 8px;
+	--border-radius-l: 12px;
+}
+
+:root {
+	/* gap */
+
+	--gap-3xs: 2px;
+	--gap-2xs: 6px;
+	--gap-xs: 8px;
+	--gap-s: 12px;
+	--gap-m: 16px;
+	--gap-l: 20px;
+	--gap-xl: 24px;
+	--gap-2xl: 30px;
+	--gap-3xl: 40px;
+}
+
+:root {
+	/* font size */
+
+	--font-size-xs: 8px;
+	--font-size-sm: 12px;
+	--font-size-md: 16px;
+	--font-size-lg: 20px;
+	--font-size-xl: 24px;
+	--font-size-2xl: 30px;
+	--font-size-3xl: 36px;
+}
+
+:root {
+	/* background */
+
+	/* light */
+
+	--color-light-bg-primary: #fff;
+	--color-light-bg-table-accent: #faf9f9;
+	--color-light-bg-button-primary: rgba(7, 67, 245, 5%);
+	--color-light-bg-button-primary-hover: rgba(7, 67, 245, 10%);
+	--color-light-bg-muted: #ececec;
+
+	/* dark */
+
+	--color-dark-bg-primary: #1e1f27;
+	--color-dark-bg-table-accent: #313034;
+	--color-dark-bg-button-primary: #313034;
+	--color-dark-bg-muted: #808080;
+}
+
+:root {
+	/* text */
+
+	/* light */
+
+	--color-light-text-primary: #000;
+	--color-light-text-secondary: #7e7e7e;
+	--color-light-text-button-primary: #787fc4;
+
+	/* dark */
+
+	--color-dark-text-primary: #fff;
+	--color-dark-text-secondary: #7e7e7e;
+	--color-dark-text-button-primary: #787fc4;
+}
+
+:root {
+	/* static */
+
+	--color-icon-muted: #808080;
+	--color-white: #fff;
+	--color-black: #000;
+	--color-light-gray-100: #ececec;
+	--color-light-gray-300: #cecece;
+	--color-light-gray-500: #adadad;
+	--color-status-success: #98d5a3;
+	--color-status-pending: #f5ec6b;
+	--color-status-failure: #d59898;
+}

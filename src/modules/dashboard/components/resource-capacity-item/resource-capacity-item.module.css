@@ -1,0 +1,43 @@
+.header {
+	margin-bottom: var(--gap-3xs);
+	font-size: var(--font-size-lg);
+	font-weight: 400;
+}
+
+.progress {
+	width: 100%;
+	height: 40px;
+	border-right: 2px solid transparent;
+
+	background: repeating-linear-gradient(
+		to right,
+		var(--color-light-bg-muted),
+		var(--color-light-bg-muted) 1px,
+		var(--color-light-bg-primary) 2px,
+		var(--color-light-bg-primary) 4px
+	);
+
+	animation: expand-width 0.5s ease-in-out forwards;
+}
+
+.low {
+	border-color: var(--color-status-success);
+}
+
+.medium {
+	border-color: var(--color-status-pending);
+}
+
+.high {
+	border-color: var(--color-status-failure);
+}
+
+@keyframes expand-width {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: var(--final-width);
+	}
+}
