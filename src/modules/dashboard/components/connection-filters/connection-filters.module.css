@@ -19,9 +19,9 @@
 
 .item_wrapper:hover {
 	cursor: pointer;
-	background-color: var(--color-light-bg-cornflower);
+	background-color: var(--color-light-bg-cornflower-300);
 }
 
 .item_active {
-	background-color: var(--color-light-bg-cornflower);
+	background-color: var(--color-light-bg-cornflower-300);
 }

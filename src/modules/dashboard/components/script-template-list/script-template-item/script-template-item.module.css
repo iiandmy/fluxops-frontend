@@ -1,0 +1,17 @@
+.template_item_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 20px;
+
+	color: var(--color-light-text-cornflower);
+
+	background-color: var(--color-light-bg-cornflower-300);
+
+	transition: background-color 0.3s;
+}
+
+.template_item_wrapper:hover {
+	background-color: var(--color-light-bg-cornflower-500);
+}

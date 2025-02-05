@@ -88,7 +88,8 @@ input {
 :root {
 	/* light */
 
-	--color-light-bg-cornflower: rgba(7, 67, 245, 5%);
+	--color-light-bg-cornflower-300: rgba(7, 67, 245, 5%);
+	--color-light-bg-cornflower-500: rgba(7, 67, 245, 10%);
 	--color-light-text-cornflower: rgba(0, 12, 141, 50%);
 	--color-light-text-muted: rgba(0, 0, 0, 50%);
 	--color-light-bg-card: #e2e7eb;
