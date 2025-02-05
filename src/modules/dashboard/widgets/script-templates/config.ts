@@ -1,4 +1,6 @@
-export const templates = [
+import { ScriptTemplate } from '~/modules/dashboard/types';
+
+export const templates: ScriptTemplate[] = [
 	{
 		label: 'Docker Container',
 		value: 'docker',
