@@ -10,7 +10,7 @@ export const makeStore = () => {
 		reducer: rootReducer,
 		middleware: (getDefaultMiddleware) =>
 			getDefaultMiddleware().concat(baseApi.middleware),
-		devTools: env.PROD ? false : true,
+		devTools: env.DEV,
 	});
 
 	setupListeners(store.dispatch);
