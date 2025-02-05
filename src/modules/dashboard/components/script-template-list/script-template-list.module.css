@@ -1,0 +1,6 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap-2xl) var(--gap-3xl);
+	width: 100%;
+}

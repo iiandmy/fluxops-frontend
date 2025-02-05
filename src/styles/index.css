@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	transition: background-color 0.3s linear;
 }
 
 html,
@@ -81,6 +82,8 @@ input {
 	--gap-m: 16px;
 	--gap-l: 20px;
 	--gap-xl: 24px;
+	--gap-2xl: 30px;
+	--gap-3xl: 40px;
 }
 
 :root {
@@ -102,7 +105,8 @@ input {
 
 	--color-light-bg-primary: #fff;
 	--color-light-bg-table-accent: #faf9f9;
-	--color-light-bg-button-primary: #0743f50d;
+	--color-light-bg-button-primary: rgba(7, 67, 245, 5%);
+	--color-light-bg-button-primary-hover: rgba(7, 67, 245, 10%);
 	--color-light-bg-muted: #ececec;
 
 	/* dark */

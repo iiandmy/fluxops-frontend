@@ -2,7 +2,7 @@ import { GenericWrapper, Separator } from '~/components';
 import { PageTitle } from '~/constants';
 import { useTitle } from '~/hooks';
 
-import { Connections, ResourceCapacity } from '../widgets';
+import { Connections, ResourceCapacity, ScriptTemplates } from '../widgets';
 import css from './page.module.css';
 
 export const DashboardPage = () => {
@@ -13,7 +13,10 @@ export const DashboardPage = () => {
 			<div className={css.wrapper}>
 				<Connections />
 				<Separator />
-				<ResourceCapacity />
+				<div>
+					<ResourceCapacity />
+					<ScriptTemplates />
+				</div>
 			</div>
 		</GenericWrapper>
 	);
