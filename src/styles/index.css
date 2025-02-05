@@ -103,14 +103,14 @@ input {
 	--color-light-bg-primary: #fff;
 	--color-light-bg-table-accent: #faf9f9;
 	--color-light-bg-button-primary: #0743f50d;
-	--color-light-bg-line: #ececec;
+	--color-light-bg-muted: #ececec;
 
 	/* dark */
 
 	--color-dark-bg-primary: #1e1f27;
 	--color-dark-bg-table-accent: #313034;
 	--color-dark-bg-button-primary: #313034;
-	--color-dark-bg-line: #808080;
+	--color-dark-bg-muted: #808080;
 }
 
 :root {
@@ -120,17 +120,17 @@ input {
 
 	--color-light-text-primary: #000;
 	--color-light-text-secondary: #7e7e7e;
-	--color-light-text-button: #787fc4;
+	--color-light-text-button-primary: #787fc4;
 
 	/* dark */
 
 	--color-dark-text-primary: #fff;
 	--color-dark-text-secondary: #7e7e7e;
-	--color-dark-text-button: #787fc4;
+	--color-dark-text-button-primary: #787fc4;
 }
 
 :root {
-	/* common */
+	/* static */
 
 	--color-icon-muted: #808080;
 	--color-white: #fff;

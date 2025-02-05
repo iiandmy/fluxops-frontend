@@ -7,6 +7,7 @@ const envVariablesSchema = z.object({
 		.toLowerCase()
 		.transform((x) => x === 'true')
 		.pipe(z.boolean()),
+	PROD: z.boolean(),
 });
 
 let env: z.infer<typeof envVariablesSchema>;
