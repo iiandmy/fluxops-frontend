@@ -103,12 +103,14 @@ input {
 	--color-light-bg-primary: #fff;
 	--color-light-bg-table-accent: #faf9f9;
 	--color-light-bg-button-primary: #0743f50d;
+	--color-light-bg-line: #ececec;
 
 	/* dark */
 
 	--color-dark-bg-primary: #1e1f27;
 	--color-dark-bg-table-accent: #313034;
 	--color-dark-bg-button-primary: #313034;
+	--color-dark-bg-line: #808080;
 }
 
 :root {
