@@ -3,13 +3,13 @@
 	align-items: center;
 	justify-content: center;
 
-	padding: 20px;
+	padding: var(--gap-l);
 
 	color: var(--color-light-text-cornflower);
 
 	background-color: var(--color-light-bg-cornflower-300);
 
-	transition: background-color 0.3s;
+	transition: background-color 0.3s linear;
 }
 
 .template_item_wrapper:hover {

@@ -1,7 +1,7 @@
 .header {
-	padding: 26px 8px 0 0;
+	padding: var(--gap-xl) var(--gap-xs) 0 0;
 }
 
 .templates_wrapper {
-	padding: 20px 5px;
+	padding: var(--gap-l) var(--gap-2xs);
 }

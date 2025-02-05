@@ -1,5 +1,5 @@
 import Skeleton from 'react-loading-skeleton';
 
 export const ScriptTemplateItemSkeleton = () => (
-	<Skeleton style={{ padding: '20px' }} />
+	<Skeleton style={{ padding: 'var(--gap-l)' }} />
 );
