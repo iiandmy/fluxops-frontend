@@ -1,6 +1,8 @@
 .wrapper {
 	height: 80px;
 	padding: var(--gap-m) var(--gap-l);
+
+	/* TODO: move box shadow to variables and adapt for themes */
 	box-shadow: 0 4px 46px 0 #00000008;
 }
 
@@ -26,7 +28,7 @@
 .nav_item {
 	cursor: pointer;
 	font-size: var(--font-size-lg);
-	color: var(--color-light-text-muted);
+	color: var(--color-light-text-secondary);
 	transition: all 0.3s linear;
 }
 

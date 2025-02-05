@@ -10,7 +10,7 @@
 
 	font-size: 16px;
 	font-weight: 300;
-	color: var(--color-light-text-cornflower);
+	color: var(--color-light-text-button-primary);
 
 	background-color: transparent;
 
@@ -19,9 +19,9 @@
 
 .item_wrapper:hover {
 	cursor: pointer;
-	background-color: var(--color-light-bg-cornflower-300);
+	background-color: var(--color-light-bg-button-primary);
 }
 
 .item_active {
-	background-color: var(--color-light-bg-cornflower-300);
+	background-color: var(--color-light-bg-button-primary);
 }

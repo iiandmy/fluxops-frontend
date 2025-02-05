@@ -1,4 +1,4 @@
 /node_modules
 /dist
 yarn.lock
-/src/index.css
+/src/styles

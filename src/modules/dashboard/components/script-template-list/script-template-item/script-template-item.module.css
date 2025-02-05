@@ -7,11 +7,11 @@
 
 	color: var(--color-light-text-cornflower);
 
-	background-color: var(--color-light-bg-cornflower-300);
+	background-color: var(--color-light-bg-button-primary);
 
 	transition: background-color 0.3s linear;
 }
 
 .template_item_wrapper:hover {
-	background-color: var(--color-light-bg-cornflower-500);
+	background-color: var(--color-light-bg-button-primary-hover);
 }

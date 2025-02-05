@@ -5,13 +5,13 @@
 }
 
 .wrapper:nth-child(odd) {
-	background-color: var(--color-light-bg-card-muted);
+	background-color: var(--color-light-bg-table-accent);
 }
 
 .footer_wrapper {
 	display: flex;
 	gap: 12px;
-	color: var(--color-light-text-muted);
+	color: var(--color-light-text-secondary);
 }
 
 .upper_text_wrapper {
