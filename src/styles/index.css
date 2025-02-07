@@ -89,13 +89,37 @@ input {
 :root {
 	/* font size */
 
-	--font-size-xs: 8px;
-	--font-size-sm: 12px;
-	--font-size-md: 16px;
-	--font-size-lg: 20px;
-	--font-size-xl: 24px;
-	--font-size-2xl: 30px;
-	--font-size-3xl: 36px;
+	--font-size-3xs: 6px;
+	--font-size-2xs: 8px;
+	--font-size-xs: 12px;
+	--font-size-sm: 16px;
+	--font-size-md: 21px;
+	--font-size-lg: 26px;
+	--font-size-xl: 30px;
+	--font-size-2xl: 36px;
+	--font-size-3xl: 40px;
+	--font-size-3xl: 46px;
+}
+
+:root {
+	/* line height */
+
+	--line-height-lg: 32px;
+	--line-height-2xl: 42px;
+}
+
+:root {
+	/* font weight */
+
+	--font-weight-thin: 100;
+	--font-weight-xlight: 200;
+	--font-weight-light: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-xbold: 800;
+	--font-weight-black: 900;
 }
 
 :root {
