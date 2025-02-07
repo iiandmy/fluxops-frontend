@@ -142,7 +142,8 @@ input {
 	--color-light-gray-100: #ececec;
 	--color-light-gray-300: #cecece;
 	--color-light-gray-500: #adadad;
-	--color-status-success: #98d5a3;
-	--color-status-pending: #f5ec6b;
-	--color-status-failure: #d59898;
+	--color-status-success: #95f3a6;
+	--color-status-pending: #faef59;
+	--color-status-failure: #ff6e6e;
+	--shadow-lg: 0 4px 46px 0 rgba(0, 0, 0, 10%);
 }

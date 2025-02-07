@@ -3,5 +3,5 @@
 }
 
 .templates_wrapper {
-	padding: var(--gap-l) var(--gap-2xs);
+	padding: var(--gap-xl) var(--gap-xs);
 }

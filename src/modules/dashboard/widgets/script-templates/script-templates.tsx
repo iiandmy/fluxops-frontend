@@ -10,13 +10,11 @@ export const ScriptTemplates = () => (
 	<Section
 		title="Script Templates"
 		foldable
+		defaultExpanded={false}
 		rightHeaderAddon={<FaRegCircle color="var(--color-icon-muted)" />}
+		bodyClassName={css.templates_wrapper}
 		headerClassName={css.header}
 	>
-		<ScriptTemplateList
-			showSkeleton={false}
-			items={templates}
-			className={css.templates_wrapper}
-		/>
+		<ScriptTemplateList showSkeleton={false} items={templates} />
 	</Section>
 );
