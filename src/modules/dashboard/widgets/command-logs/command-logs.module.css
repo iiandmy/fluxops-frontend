@@ -1,0 +1,11 @@
+.header {
+	padding: var(--gap-xl) var(--gap-xs) 0 0;
+}
+
+.wrapper {
+	flex: 1;
+}
+
+.body_wrapper {
+	padding-top: var(--gap-m);
+}

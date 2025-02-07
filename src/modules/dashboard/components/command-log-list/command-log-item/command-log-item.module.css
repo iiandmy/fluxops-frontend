@@ -1,0 +1,21 @@
+.item_wrapper {
+	display: grid;
+	grid-template-columns: 1.2fr 1fr 60%;
+	gap: var(--gap-xs);
+
+	width: 100%;
+
+	font-size: var(--font-size-md);
+}
+
+.command_wrapper {
+	padding-left: var(--gap-m);
+}
+
+.item_wrapper:nth-child(odd) .command_wrapper {
+	background-color: var(--color-light-bg-table-accent);
+}
+
+.address_wrapper {
+	color: var(--color-light-text-secondary);
+}

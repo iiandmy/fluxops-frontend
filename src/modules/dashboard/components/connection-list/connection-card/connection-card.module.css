@@ -1,7 +1,7 @@
 .wrapper {
-	padding: 4px 32px 16px 50px;
-	font-size: 20px;
-	line-height: 32px;
+	padding: 5px 32px 9px 50px;
+	font-size: 21px;
+	line-height: 42px;
 }
 
 .wrapper:nth-child(odd) {
