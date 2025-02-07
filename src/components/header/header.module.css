@@ -25,16 +25,10 @@
 
 .nav_item {
 	cursor: pointer;
-	font-size: var(--font-size-lg);
 	color: var(--color-light-text-secondary);
 	transition: all 0.3s linear;
 }
 
 .nav_item:hover {
-	color: var(--color-light-text-primary);
-}
-
-.nav_item_active {
-	cursor: default;
 	color: var(--color-light-text-primary);
 }

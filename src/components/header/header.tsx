@@ -7,6 +7,7 @@ import { selectTheme, toggleTheme } from '~/store/theme';
 
 import { Button } from '../button';
 import { GenericWrapper } from '../generic-wrapper';
+import { Typography } from '../typography';
 import { navItems } from './config';
 import css from './header.module.css';
 
@@ -24,14 +25,16 @@ export const Header = () => {
 				<div className={css.container}>
 					<nav className={css.nav}>
 						{navItems.map(({ id, title, href }) => (
-							<NavLink
-								className={({ isActive }) =>
-									[isActive ? css.nav_item_active : '', css.nav_item].join(' ')
-								}
-								key={id}
-								to={href}
-							>
-								{title}
+							<NavLink className={css.nav_item} key={id} to={href}>
+								{({ isActive }) => (
+									<Typography.Headlines
+										tag="h2"
+										fontSize="md"
+										variant={isActive ? 'primary' : 'secondary'}
+									>
+										{title}
+									</Typography.Headlines>
+								)}
 							</NavLink>
 						))}
 					</nav>
@@ -43,7 +46,9 @@ export const Header = () => {
 								<FaSun size={25} color="var(--color-icon-muted)" />
 							)}
 						</Button>
-						<h1>FLUXOPS</h1>
+						<Typography.Headlines tag="h1" fontSize="2xl" weight="bold">
+							FLUXOPS
+						</Typography.Headlines>
 					</div>
 				</div>
 			</GenericWrapper>
