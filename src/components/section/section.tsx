@@ -19,6 +19,7 @@ interface ISectionAddonProps {
 
 interface ISectionOwnProps {
 	foldable?: boolean;
+	defaultExpanded?: boolean;
 	title: string;
 }
 
@@ -29,15 +30,17 @@ type SectionProps = ISectionOwnProps &
 
 export const Section: FC<SectionProps> = ({
 	foldable = false,
+	defaultExpanded = true,
 	title,
 	className,
 	leftHeaderAddon,
 	rightHeaderAddon,
 	innerHeaderAddon,
+	bodyClassName,
 	children,
 	headerClassName,
 }) => {
-	const [expanded, setExpanded] = useState(true);
+	const [expanded, setExpanded] = useState(defaultExpanded);
 
 	return (
 		<div className={cn(css.wrapper, className)}>
@@ -55,7 +58,9 @@ export const Section: FC<SectionProps> = ({
 				<div className={css.inner_addon_wrapper}>{innerHeaderAddon}</div>
 				{rightHeaderAddon}
 			</div>
-			{expanded && <div className={css.body_wrapper}>{children}</div>}
+			{expanded && (
+				<div className={cn(css.body_wrapper, bodyClassName)}>{children}</div>
+			)}
 		</div>
 	);
 };
