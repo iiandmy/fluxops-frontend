@@ -16,6 +16,16 @@
 	background-color: var(--color-light-bg-table-accent);
 }
 
+.column_wrapper {
+	overflow: hidden;
+
+	max-width: 100%;
+
+	line-height: 42px;
+	text-overflow: ellipsis;
+	text-wrap: nowrap;
+}
+
 .address_wrapper {
 	color: var(--color-light-text-secondary);
 }
