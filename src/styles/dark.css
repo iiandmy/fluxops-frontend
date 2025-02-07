@@ -3,12 +3,27 @@
 
 	--color-light-bg-primary: var(--color-dark-bg-primary);
 	--color-light-bg-table-accent: var(--color-dark-bg-table-accent);
-	--color-light-bg-button-primary: var(--color-dark-bg-button-primary);
 	--color-light-bg-muted: var(--color-dark-bg-table-accent);
+	--color-light-bg-button-primary: var(--color-dark-bg-button-primary);
+	--color-light-bg-button-primary-hover: var(
+		--color-dark-bg-button-primary-hover
+	);
+	--color-light-bg-button-secondary: var(--color-dark-bg-button-secondary);
+	--color-light-bg-button-secondary-hover: var(
+		--color-dark-bg-button-secondary-hover
+	);
+	--color-light-bg-button-transparent-hover: var(
+		--color-dark-bg-button-transparent-hover
+	);
 
 	/* text */
 
 	--color-light-text-primary: var(--color-dark-text-primary);
 	--color-light-text-secondary: var(--color-dark-text-secondary);
 	--color-light-text-button-primary: var(--color-dark-text-button-primary);
+	--color-light-text-button-secondary: var(--color-dark-text-button-secondary);
+	--color-light-text-button-transparent: var(
+		--color-dark-text-button-transparent
+	);
+	--color-light-text-logo: var(--color-dark-text-logo);
 }

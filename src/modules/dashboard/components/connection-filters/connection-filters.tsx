@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { ComponentProps, FC } from 'react';
+import { Button } from '~/components';
 
 import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
 
@@ -23,12 +24,14 @@ const ConnectionFilterItem: FC<IConnectionFilterProps> = ({
 	isActive,
 	...props
 }) => (
-	<button
+	<Button
+		variant="transparent"
+		size="small"
 		className={cn({ [css.item_active]: isActive }, css.item_wrapper)}
 		{...props}
 	>
 		{label}
-	</button>
+	</Button>
 );
 
 export const ConnectionFilters: FC<IConnectionFiltersProps> = ({

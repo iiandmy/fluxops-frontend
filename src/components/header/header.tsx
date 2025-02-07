@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { FaMoon, FaSun } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import { Theme } from '~/constants';
@@ -26,7 +27,7 @@ export const Header = () => {
 						{navItems.map(({ id, title, href }) => (
 							<NavLink
 								className={({ isActive }) =>
-									[isActive ? css.nav_item_active : '', css.nav_item].join(' ')
+									cn({ [css.nav_item_active]: isActive }, css.nav_item)
 								}
 								key={id}
 								to={href}
@@ -36,14 +37,21 @@ export const Header = () => {
 						))}
 					</nav>
 					<div className={css.content_container}>
-						<Button onClick={toggleThemeClick} variant="primary">
+						<Button
+							onClick={toggleThemeClick}
+							variant="transparent"
+							shape="circle"
+							size="small"
+							ghost
+							block
+						>
 							{theme === Theme.Dark ? (
 								<FaMoon size={25} color="var(--color-icon-muted)" />
 							) : (
 								<FaSun size={25} color="var(--color-icon-muted)" />
 							)}
 						</Button>
-						<h1>FLUXOPS</h1>
+						<h1 className={css.logo}>FLUXOPS</h1>
 					</div>
 				</div>
 			</GenericWrapper>
