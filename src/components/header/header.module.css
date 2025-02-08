@@ -25,7 +25,6 @@
 
 .nav_item {
 	cursor: pointer;
-	font-size: var(--font-size-lg);
 	color: var(--color-light-text-secondary);
 	transition: all 0.3s linear;
 }
@@ -34,12 +33,6 @@
 	color: var(--color-light-text-primary);
 }
 
-.nav_item_active {
-	cursor: default;
-	color: var(--color-light-text-primary);
-}
-
 .logo {
-	font-size: 42px;
 	color: var(--color-light-text-logo);
 }

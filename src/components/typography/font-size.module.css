@@ -1,0 +1,39 @@
+.font_size_3xs {
+	font-size: var(--font-size-3xs);
+}
+
+.font_size_2xs {
+	font-size: var(--font-size-2xs);
+}
+
+.font_size_xs {
+	font-size: var(--font-size-xs);
+}
+
+.font_size_sm {
+	font-size: var(--font-size-sm);
+}
+
+.font_size_md {
+	font-size: var(--font-size-md);
+}
+
+.font_size_lg {
+	font-size: var(--font-size-lg);
+}
+
+.font_size_xl {
+	font-size: var(--font-size-xl);
+}
+
+.font_size_2xl {
+	font-size: var(--font-size-2xl);
+}
+
+.font_size_3xl {
+	font-size: var(--font-size-3xl);
+}
+
+.font_size_4xl {
+	font-size: var(--font-size-4xl);
+}

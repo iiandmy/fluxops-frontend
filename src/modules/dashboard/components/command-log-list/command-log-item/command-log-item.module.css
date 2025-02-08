@@ -5,7 +5,7 @@
 
 	width: 100%;
 
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 }
 
 .command_wrapper {

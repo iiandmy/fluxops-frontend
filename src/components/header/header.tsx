@@ -1,13 +1,11 @@
-import cn from 'classnames';
 import { FaMoon, FaSun } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
+import { Button, GenericWrapper, Typography } from '~/components';
 import { Theme } from '~/constants';
 import { useAppDispatch, useAppSelector } from '~/hooks';
 
 import { selectTheme, toggleTheme } from '~/store/theme';
 
-import { Button } from '../button';
-import { GenericWrapper } from '../generic-wrapper';
 import { navItems } from './config';
 import css from './header.module.css';
 
@@ -25,14 +23,16 @@ export const Header = () => {
 				<div className={css.container}>
 					<nav className={css.nav}>
 						{navItems.map(({ id, title, href }) => (
-							<NavLink
-								className={({ isActive }) =>
-									cn({ [css.nav_item_active]: isActive }, css.nav_item)
-								}
-								key={id}
-								to={href}
-							>
-								{title}
+							<NavLink className={css.nav_item} key={id} to={href}>
+								{({ isActive }) => (
+									<Typography.Headlines
+										tag="h2"
+										fontSize="md"
+										variant={isActive ? 'primary' : 'secondary'}
+									>
+										{title}
+									</Typography.Headlines>
+								)}
 							</NavLink>
 						))}
 					</nav>
@@ -51,7 +51,14 @@ export const Header = () => {
 								<FaSun size={25} color="var(--color-icon-muted)" />
 							)}
 						</Button>
-						<h1 className={css.logo}>FLUXOPS</h1>
+						<Typography.Headlines
+							tag="h1"
+							fontSize="2xl"
+							weight="bold"
+							className={css.logo}
+						>
+							FLUXOPS
+						</Typography.Headlines>
 					</div>
 				</div>
 			</GenericWrapper>
