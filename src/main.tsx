@@ -5,6 +5,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { Provider as ReduxProvider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import { LoadingPage } from '~/components';
 
 import { appRouter } from '~/app/app-router';
 
@@ -22,7 +23,10 @@ createRoot(document.getElementById('root')!).render(
 					highlightColor="var(--color-light-gray-500)"
 				>
 					<Toaster />
-					<RouterProvider router={appRouter()} />
+					<RouterProvider
+						router={appRouter()}
+						fallbackElement={<LoadingPage />}
+					/>
 				</SkeletonTheme>
 			</ThemeProvider>
 		</ReduxProvider>
