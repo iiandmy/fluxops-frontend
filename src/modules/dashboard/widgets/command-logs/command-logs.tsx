@@ -3,8 +3,9 @@ import { Section } from '~/components';
 
 import { CommandLogList } from '~/modules/dashboard/components';
 
+import { commandLogs } from '~/utils/mocks';
+
 import css from './command-logs.module.css';
-import { commandLogs } from './config';
 
 export const CommandLogs = () => (
 	<Section

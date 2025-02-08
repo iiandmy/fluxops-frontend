@@ -1,4 +1,4 @@
-import { CommandLog } from '../../types';
+import { CommandLog } from '~/modules/dashboard/types';
 
 export const commandLogs: CommandLog[] = [
 	{

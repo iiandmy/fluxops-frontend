@@ -3,7 +3,8 @@ import { Section } from '~/components';
 
 import { ScriptTemplateList } from '~/modules/dashboard/components';
 
-import { templates } from './config';
+import { templates } from '~/utils/mocks';
+
 import css from './script-templates.module.css';
 
 export const ScriptTemplates = () => (
