@@ -1,0 +1,26 @@
+.default {
+	max-width: 100%;
+	height: auto;
+}
+
+.rounded {
+	border-radius: 50%;
+}
+
+/* Object fit */
+
+.object_fit_none {
+	object-fit: none;
+}
+
+.object_fit_cover {
+	object-fit: cover;
+}
+
+.object_fit_contain {
+	object-fit: contain;
+}
+
+.object_fit_fill {
+	object-fit: fill;
+}
