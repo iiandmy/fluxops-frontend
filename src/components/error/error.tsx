@@ -15,11 +15,21 @@ export const ErrorPage = () => (
 				Something went wrong
 			</Typography.Headlines>
 			<div className={css.buttons_wrapper}>
-				<Button onClick={() => window.location.reload()} variant="secondary">
-					Refresh
+				<Button
+					onClick={() => window.location.reload()}
+					variant="transparent"
+					block
+				>
+					<Typography.Body fontSize="sm">Refresh</Typography.Body>
 				</Button>
-				<Button tag="a" to={AppRoutes.Dashboard} variant="secondary" replace>
-					Home
+				<Button
+					tag="a"
+					to={AppRoutes.Dashboard}
+					variant="secondary"
+					replace
+					block
+				>
+					<Typography.Body fontSize="sm">Home</Typography.Body>
 				</Button>
 			</div>
 		</div>

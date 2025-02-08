@@ -5,3 +5,7 @@
 .line_height_lg {
 	line-height: var(--line-height-lg);
 }
+
+.line_height_auto {
+	line-height: normal;
+}

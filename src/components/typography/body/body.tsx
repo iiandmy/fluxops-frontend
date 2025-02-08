@@ -31,7 +31,7 @@ export const Body = forwardRef<BodyElementType, BodyProps>(
 			tag: Component = 'span',
 			variant = 'primary',
 			fontSize = 'md',
-			lineHeight = '2xl',
+			lineHeight = 'auto',
 			weight = 'regular',
 			className,
 			children,
