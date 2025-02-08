@@ -5,4 +5,5 @@ export enum AppRoutes {
 	Users = '/users',
 	Settings = '/settings',
 	Login = '/login',
+	NotFound = '*',
 }
