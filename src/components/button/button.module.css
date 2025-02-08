@@ -49,10 +49,6 @@
 
 /* size */
 
-.button_size_default {
-	padding: 0;
-}
-
 .button_size_sm {
 	padding: var(--gap-s);
 }
@@ -83,9 +79,7 @@
 	border-radius: var(--border-radius-l);
 }
 
-/* shape */
-
-.button_circle {
+.rounded {
 	border-radius: 50%;
 }
 

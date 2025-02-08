@@ -15,13 +15,7 @@ const NotFoundPage = () => (
 				Page Not Found
 			</Typography.Headlines>
 			<div className={css.button_wrapper}>
-				<Button
-					as="link"
-					to={AppRoutes.Dashboard}
-					size="md"
-					variant="secondary"
-					replace
-				>
+				<Button tag="a" to={AppRoutes.Dashboard} variant="secondary" replace>
 					Home
 				</Button>
 			</div>

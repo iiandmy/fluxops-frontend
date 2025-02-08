@@ -42,24 +42,22 @@ export const Image = forwardRef<HTMLImageElement, IImageProps>(
 					fallback ?? (hasError ? ERROR_FALLBACK_URL : LOADING_FALLBACK_URL)
 				);
 			}
+
+			return src;
 		};
-
-		const computedSrc = computeSrc() ?? src;
-
-		const computedClass = cn(
-			css.default,
-			css[`object_fit_${objectFit}`],
-			{ [css.rounded]: rounded },
-			className
-		);
 
 		return (
 			<img
 				ref={ref as never}
-				src={computedSrc}
+				src={computeSrc()}
 				onLoad={onLoadHandler}
 				onError={onErrorHandler}
-				className={computedClass}
+				className={cn(
+					css.default,
+					css[`object_fit_${objectFit}`],
+					{ [css.rounded]: rounded },
+					className
+				)}
 				{...restProps}
 			/>
 		);
