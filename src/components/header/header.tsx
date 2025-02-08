@@ -37,14 +37,26 @@ export const Header = () => {
 						))}
 					</nav>
 					<div className={css.content_container}>
-						<Button onClick={toggleThemeClick} variant="primary">
+						<Button
+							onClick={toggleThemeClick}
+							variant="transparent"
+							shape="circle"
+							size="sm"
+							ghost
+							block
+						>
 							{theme === Theme.Dark ? (
 								<FaMoon size={25} color="var(--color-icon-muted)" />
 							) : (
 								<FaSun size={25} color="var(--color-icon-muted)" />
 							)}
 						</Button>
-						<Typography.Headlines tag="h1" fontSize="2xl" weight="bold">
+						<Typography.Headlines
+							tag="h1"
+							fontSize="2xl"
+							weight="bold"
+							className={css.logo}
+						>
 							FLUXOPS
 						</Typography.Headlines>
 					</div>
