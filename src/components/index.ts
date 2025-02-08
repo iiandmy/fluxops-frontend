@@ -1,3 +1,4 @@
+export { Typography } from './typography';
 export { GenericWrapper } from './generic-wrapper';
 export { Section } from './section';
 export { Button } from './button';

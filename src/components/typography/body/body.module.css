@@ -1,0 +1,12 @@
+.component {
+	margin: 0;
+	padding: 0;
+}
+
+.primary {
+	color: var(--color-light-text-primary);
+}
+
+.secondary {
+	color: var(--color-light-text-secondary);
+}

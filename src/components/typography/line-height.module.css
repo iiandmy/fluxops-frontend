@@ -1,0 +1,7 @@
+.line_height_2xl {
+	line-height: var(--line-height-2xl);
+}
+
+.line_height_lg {
+	line-height: var(--line-height-lg);
+}

@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { ComponentProps, FC, ReactElement, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
+import { Typography } from '~/components';
 
 import css from './section.module.css';
 
@@ -47,7 +48,7 @@ export const Section: FC<SectionProps> = ({
 			<div className={cn(css.header_wrapper, headerClassName)}>
 				<div className={css.title_wrapper}>
 					{leftHeaderAddon}
-					<div className={css.title}>{title}</div>
+					<Typography.Headlines>{title}</Typography.Headlines>
 					{foldable && (
 						<FaChevronDown
 							onClick={() => setExpanded((p) => !p)}
