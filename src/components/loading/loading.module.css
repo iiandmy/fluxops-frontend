@@ -25,7 +25,7 @@
 	background-clip: text;
 	background-size: 500% auto;
 
-	animation: text-shine 2s ease-in-out infinite;
+	animation: text-shine 2s ease-in-out infinite alternate-reverse;
 
 	-webkit-text-fill-color: transparent;
 }
