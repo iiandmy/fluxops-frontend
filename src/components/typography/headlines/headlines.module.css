@@ -10,19 +10,3 @@
 .secondary {
 	color: var(--color-light-text-secondary);
 }
-
-.bold {
-	font-weight: var(--font-weight-bold);
-}
-
-.medium {
-	font-weight: var(--font-weight-medium);
-}
-
-.regular {
-	font-weight: var(--font-weight-regular);
-}
-
-.light {
-	font-weight: var(--font-weight-light);
-}

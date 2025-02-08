@@ -1,7 +1,8 @@
 import cn from 'classnames';
 import { HTMLAttributes, ReactNode, forwardRef } from 'react';
 
-import fonts from '../fonts.module.css';
+import fonts from '../font-size.module.css';
+import weights from '../font-weight.module.css';
 import heights from '../line-height.module.css';
 import { FontSize, LineHeight } from '../types';
 import css from './body.module.css';
@@ -41,10 +42,10 @@ export const Body = forwardRef<BodyElementType, BodyProps>(
 		<Component
 			className={cn(
 				css.component,
-				css[weight],
 				css[variant],
+				weights[weight],
 				heights[`line_height_${lineHeight}`],
-				fonts[`font_${fontSize}`],
+				fonts[`font_size_${fontSize}`],
 				className
 			)}
 			ref={ref as never}
