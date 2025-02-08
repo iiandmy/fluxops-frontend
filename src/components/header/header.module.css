@@ -25,7 +25,6 @@
 
 .nav_item {
 	cursor: pointer;
-	color: var(--color-light-text-secondary);
 	transition: all 0.3s linear;
 }
 

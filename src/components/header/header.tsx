@@ -23,9 +23,10 @@ export const Header = () => {
 				<div className={css.container}>
 					<nav className={css.nav}>
 						{navItems.map(({ id, title, href }) => (
-							<NavLink className={css.nav_item} key={id} to={href}>
+							<NavLink key={id} to={href}>
 								{({ isActive }) => (
 									<Typography.Headlines
+										className={css.nav_item}
 										tag="h2"
 										fontSize="md"
 										variant={isActive ? 'primary' : 'secondary'}
