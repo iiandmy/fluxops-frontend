@@ -10,13 +10,17 @@ type ButtonShape = 'circle';
 type ButtonRender = 'link';
 type ButtonRadius = 'none' | 'sm' | 'md' | 'lg';
 
-interface IButtonProps extends ComponentProps<'button'> {
+interface ILinkProps {
+	to?: string;
+	replace?: boolean;
+}
+
+interface IButtonProps extends ComponentProps<'button'>, ILinkProps {
 	variant?: ButtonVariant;
 	size?: ButtonSize;
 	shape?: ButtonShape;
 	as?: ButtonRender;
 	borderRadius?: ButtonRadius;
-	to?: string;
 	block?: boolean;
 	ghost?: boolean;
 }
@@ -33,6 +37,7 @@ export const Button = forwardRef<
 			shape,
 			as,
 			to,
+			replace = false,
 			children,
 			block = false,
 			borderRadius = 'none',
@@ -54,7 +59,12 @@ export const Button = forwardRef<
 
 		if (as === 'link' && to) {
 			return (
-				<Link to={to} className={computedClass} ref={ref as never}>
+				<Link
+					to={to}
+					className={computedClass}
+					ref={ref as never}
+					replace={replace}
+				>
 					{children}
 				</Link>
 			);

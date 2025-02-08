@@ -10,5 +10,12 @@ import '../dark.css';
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
 	const theme = useAppSelector(selectTheme);
 
-	return <div className={cn({ dark: theme === Theme.Dark })}>{children}</div>;
+	return (
+		<div
+			style={{ height: '100%' }}
+			className={cn({ dark: theme === Theme.Dark })}
+		>
+			{children}
+		</div>
+	);
 };
