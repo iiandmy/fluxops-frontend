@@ -41,7 +41,7 @@ export const Header = () => {
 							onClick={toggleThemeClick}
 							variant="transparent"
 							shape="circle"
-							size="small"
+							size="sm"
 							ghost
 							block
 						>

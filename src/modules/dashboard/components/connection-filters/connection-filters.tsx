@@ -26,7 +26,7 @@ const ConnectionFilterItem: FC<IConnectionFilterProps> = ({
 }) => (
 	<Button
 		variant="transparent"
-		size="small"
+		size="sm"
 		className={cn({ [css.item_active]: isActive }, css.item_wrapper)}
 		{...props}
 	>

@@ -9,7 +9,7 @@ interface IScriptTemplateItemProps {
 }
 
 export const ScriptTemplateItem: FC<IScriptTemplateItemProps> = ({ item }) => (
-	<Button to={AppRoutes.Clients} as="link" variant="secondary" size="large">
+	<Button to={AppRoutes.Clients} as="link" variant="secondary" size="lg">
 		{item.label}
 	</Button>
 );

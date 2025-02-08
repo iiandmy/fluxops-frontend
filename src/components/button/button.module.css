@@ -6,7 +6,6 @@
 	justify-content: center;
 
 	border: none;
-	border-radius: var(--border-radius-s);
 
 	outline: none;
 
@@ -49,15 +48,15 @@
 
 /* size */
 
-.button_size_small {
+.button_size_sm {
 	padding: var(--gap-s);
 }
 
-.button_size_medium {
+.button_size_md {
 	padding: var(--gap-m);
 }
 
-.button_size_large {
+.button_size_lg {
 	padding: var(--gap-l);
 }
 
@@ -67,15 +66,15 @@
 	border-radius: 0;
 }
 
-.button_border_radius_small {
+.button_border_radius_sm {
 	border-radius: var(--border-radius-s);
 }
 
-.button_border_radius_medium {
+.button_border_radius_md {
 	border-radius: var(--border-radius-m);
 }
 
-.button_border_radius_large {
+.button_border_radius_lg {
 	border-radius: var(--border-radius-l);
 }
 
