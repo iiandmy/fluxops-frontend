@@ -1,7 +1,9 @@
 import { ReactElement } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { ErrorPage, NotFoundPage } from '~/components';
 import { AppRoutes } from '~/constants';
 
+//TODO: rework for lazy import
 import { AutomationPage } from '~/modules/automation/pages';
 import { ClientsPage } from '~/modules/clients/pages';
 import { DashboardPage } from '~/modules/dashboard/pages';
@@ -43,8 +45,7 @@ export const appRouter = () =>
 	createBrowserRouter([
 		{
 			element: BaseLayout,
-			errorElement: <div>error</div>,
-			loader: async () => await (<>123</>),
+			errorElement: <ErrorPage />,
 			children: [
 				{
 					path: AppRoutes.Login,
@@ -95,5 +96,9 @@ export const appRouter = () =>
 					),
 				},
 			],
+		},
+		{
+			path: AppRoutes.NotFound,
+			element: <NotFoundPage />,
 		},
 	]);
