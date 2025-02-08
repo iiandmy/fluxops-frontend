@@ -1,13 +1,11 @@
 import { FaMoon, FaSun } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
+import { Button, GenericWrapper, Typography } from '~/components';
 import { Theme } from '~/constants';
 import { useAppDispatch, useAppSelector } from '~/hooks';
 
 import { selectTheme, toggleTheme } from '~/store/theme';
 
-import { Button } from '../button';
-import { GenericWrapper } from '../generic-wrapper';
-import { Typography } from '../typography';
 import { navItems } from './config';
 import css from './header.module.css';
 

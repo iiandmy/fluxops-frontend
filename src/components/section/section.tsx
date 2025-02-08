@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { ComponentProps, FC, ReactElement, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
+import { Typography } from '~/components';
 
-import { Typography } from '../typography';
 import css from './section.module.css';
 
 interface ISectionStyleProps {
