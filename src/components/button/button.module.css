@@ -49,6 +49,10 @@
 
 /* size */
 
+.button_size_default {
+	padding: 0;
+}
+
 .button_size_sm {
 	padding: var(--gap-s);
 }

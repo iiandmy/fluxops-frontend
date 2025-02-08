@@ -3,8 +3,10 @@ import { useTitle } from '~/hooks';
 
 import css from './page.module.css';
 
-export const SettingsPage = () => {
+const SettingsPage = () => {
 	useTitle(PageTitle.Settings);
 
 	return <div className={css.root}></div>;
 };
+
+export default SettingsPage;

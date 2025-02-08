@@ -1,20 +1,20 @@
-import { ReactElement } from 'react';
+import { ReactElement, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
-import { ErrorPage, NotFoundPage } from '~/components';
+import { ErrorPage } from '~/components';
 import { AppRoutes } from '~/constants';
-
-//TODO: rework for lazy import
-import { AutomationPage } from '~/modules/automation/pages';
-import { ClientsPage } from '~/modules/clients/pages';
-import { DashboardPage } from '~/modules/dashboard/pages';
-import { SettingsPage } from '~/modules/settings/pages';
-import { UsersPage } from '~/modules/users/pages';
 
 import { selectIsAuthorized } from '~/store/session';
 
 import { useAppSelector } from '~/hooks/index';
 
 import { BaseLayout } from './layout';
+
+const DashboardPage = lazy(() => import('~/modules/dashboard/pages/page'));
+const UsersPage = lazy(() => import('~/modules/users/pages/page'));
+const AutomationPage = lazy(() => import('~/modules/automation/pages/page'));
+const ClientsPage = lazy(() => import('~/modules/clients/pages/page'));
+const SettingsPage = lazy(() => import('~/modules/settings/pages/page'));
+const NotFoundPage = lazy(() => import('~/components/not-found/not-found'));
 
 type GuestGuardedProps = {
 	children: ReactElement;

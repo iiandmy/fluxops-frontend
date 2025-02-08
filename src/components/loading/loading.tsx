@@ -4,7 +4,12 @@ import css from './loading.module.css';
 export const LoadingPage = () => (
 	<div className={css.wrapper}>
 		<div className={css.content}>
-			<Typography.Headlines tag="h1" className={css.logo}>
+			<Typography.Headlines
+				tag="h1"
+				fontSize="2xl"
+				weight="bold"
+				className={css.logo}
+			>
 				FLUXOPS
 			</Typography.Headlines>
 			<Typography.Body tag="p" variant="primary">

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import css from './button.module.css';
 
 type ButtonVariant = 'primary' | 'secondary' | 'transparent';
-type ButtonSize = 'sm' | 'md' | 'lg';
+type ButtonSize = 'default' | 'sm' | 'md' | 'lg';
 type ButtonShape = 'circle';
 type ButtonRender = 'link';
 type ButtonRadius = 'none' | 'sm' | 'md' | 'lg';
