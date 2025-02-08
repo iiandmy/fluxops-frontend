@@ -41,6 +41,7 @@ export default tseslint.config(
 					unnamedComponents: 'arrow-function',
 				},
 			],
+			'react/display-name': 'off',
 			'react/prop-types': 'off',
 			'react/jsx-props-no-spreading': 'off',
 			'react/require-default-props': 'off',
