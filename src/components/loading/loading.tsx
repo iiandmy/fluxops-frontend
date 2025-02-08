@@ -6,14 +6,14 @@ export const LoadingPage = () => (
 		<div className={css.content}>
 			<Typography.Headlines
 				tag="h1"
-				fontSize="2xl"
+				fontSize="3xl"
 				weight="bold"
 				className={css.logo}
 			>
 				FLUXOPS
 			</Typography.Headlines>
-			<Typography.Body tag="p" variant="primary">
-				Connecting...
+			<Typography.Body tag="p" variant="primary" className={css.connecting}>
+				Connecting{' '}
 			</Typography.Body>
 		</div>
 	</div>
