@@ -1,10 +1,8 @@
+import { Button, Image, Typography } from '~/components';
+
 import { AppRoutes } from '~/constants';
 
 import NotFoundImage from '~/assets/images/404.png';
-
-import { Button } from '../button';
-import { Image } from '../image';
-import { Typography } from '../typography';
 
 import css from './not-found.module.css';
 

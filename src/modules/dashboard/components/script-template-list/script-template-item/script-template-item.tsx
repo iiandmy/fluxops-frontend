@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import { Button } from '~/components';
-import { AppRoutes } from '~/constants';
 
 import { ScriptTemplate } from '~/modules/dashboard/types';
+
+import { Button } from '~/components';
+
+import { AppRoutes } from '~/constants';
 
 interface IScriptTemplateItemProps {
 	item: ScriptTemplate;

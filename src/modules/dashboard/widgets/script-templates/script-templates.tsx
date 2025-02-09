@@ -1,7 +1,8 @@
 import { FaRegCircle } from 'react-icons/fa6';
-import { Section } from '~/components';
 
 import { ScriptTemplateList } from '~/modules/dashboard/components';
+
+import { Section } from '~/components';
 
 import { templates } from '~/utils/mocks';
 

@@ -1,8 +1,9 @@
 import cn from 'classnames';
 import { FC } from 'react';
-import { useTooltip } from '~/hooks';
 
 import { CommandLog } from '~/modules/dashboard/types';
+
+import { useTooltip } from '~/hooks';
 
 import css from './command-log-item.module.css';
 

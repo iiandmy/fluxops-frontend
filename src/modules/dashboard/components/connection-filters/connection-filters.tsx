@@ -1,8 +1,9 @@
 import cn from 'classnames';
 import { ComponentProps, FC } from 'react';
-import { Button } from '~/components';
 
 import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
+
+import { Button } from '~/components';
 
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
 

@@ -1,14 +1,15 @@
 import { FaRegCircle } from 'react-icons/fa6';
-import { Section } from '~/components';
-import { useFilter } from '~/hooks';
 
 import {
 	ConnectionFilters,
 	ConnectionList,
 } from '~/modules/dashboard/components';
 
+import { Section } from '~/components';
+
 import { ClientStatus } from '~/store/clients';
 
+import { useFilter } from '~/hooks';
 import { useClients } from '~/hooks/clients';
 
 import { ConnectionSummary } from '../../components/connection-summary';

@@ -1,4 +1,5 @@
 import { FaRegCircle } from 'react-icons/fa6';
+
 import { Section } from '~/components';
 
 import { resourceCapacity } from '~/utils/mocks';
