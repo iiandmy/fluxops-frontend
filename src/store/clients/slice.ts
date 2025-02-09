@@ -1,9 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '~/store';
 
 import { clientApi } from '~/api/client';
 
-import { env } from '~/lib/env';
+import { RootState } from '~/store';
+
+import { env } from '~/lib';
 
 import { __mockClients_ } from './__mock__';
 import { Client } from './types';

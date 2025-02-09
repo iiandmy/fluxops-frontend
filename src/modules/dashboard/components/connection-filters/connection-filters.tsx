@@ -1,11 +1,13 @@
 import cn from 'classnames';
 import { ComponentProps, FC } from 'react';
-import { Button } from '~/components';
 
 import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
 
-import css from './connection-filters.module.css';
+import { Button } from '~/components';
+
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
+
+import css from './connection-filters.module.css';
 
 interface IConnectionFiltersProps {
 	values: ClientLabeledFilter[];

@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { ComponentProps, FC, ReactElement, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
+
 import { Typography } from '~/components';
 
 import css from './section.module.css';

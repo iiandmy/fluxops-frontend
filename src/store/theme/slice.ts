@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { Theme } from '~/constants';
 
 import { RootState } from '../app-store';

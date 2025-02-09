@@ -1,10 +1,11 @@
 import cn from 'classnames';
 import { HTMLAttributes, ReactNode, forwardRef } from 'react';
 
+import { FontSize, LineHeight } from '../types';
+
 import fonts from '../font-size.module.css';
 import weights from '../font-weight.module.css';
 import heights from '../line-height.module.css';
-import { FontSize, LineHeight } from '../types';
 import css from './body.module.css';
 
 type BodyTagType = 'div' | 'span' | 'p';

@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { ComponentProps, forwardRef, useState } from 'react';
+
 import { PlaceholderUrl } from '~/constants';
 
 import css from './image.module.css';

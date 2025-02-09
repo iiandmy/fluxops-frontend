@@ -1,5 +1,7 @@
 import { GenericWrapper, Separator } from '~/components';
+
 import { PageTitle } from '~/constants';
+
 import { useTitle } from '~/hooks';
 
 import {
@@ -8,6 +10,7 @@ import {
 	ResourceCapacity,
 	ScriptTemplates,
 } from '../widgets';
+
 import css from './page.module.css';
 
 const DashboardPage = () => {

@@ -1,9 +1,11 @@
 import { FaRegCircle } from 'react-icons/fa6';
+
 import { Section } from '~/components';
 
 import { resourceCapacity } from '~/utils/mocks';
 
 import { ResourceCapacityItem } from '../../components';
+
 import css from './resource-capacity.module.css';
 
 export const ResourceCapacity = () => (

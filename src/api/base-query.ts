@@ -5,6 +5,7 @@ import {
 	FetchBaseQueryMeta,
 	fetchBaseQuery,
 } from '@reduxjs/toolkit/query';
+
 import { env } from '~/lib';
 
 export const baseQuery: BaseQueryFn<

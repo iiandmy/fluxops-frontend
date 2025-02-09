@@ -1,5 +1,6 @@
 import { ReactElement, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+
 import { AppRoutes } from '~/constants';
 
 import { selectIsAuthorized } from '~/store/session';
