@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { ComponentProps, forwardRef, useState } from 'react';
-import { ERROR_FALLBACK_URL, LOADING_FALLBACK_URL } from '~/constants';
+import { PlaceholderUrl } from '~/constants';
 
 import css from './image.module.css';
 
@@ -39,7 +39,7 @@ export const Image = forwardRef<HTMLImageElement, IImageProps>(
 		const computeSrc = () => {
 			if (isLoading || hasError) {
 				return (
-					fallback ?? (hasError ? ERROR_FALLBACK_URL : LOADING_FALLBACK_URL)
+					fallback ?? (hasError ? PlaceholderUrl.Error : PlaceholderUrl.Loading)
 				);
 			}
 
