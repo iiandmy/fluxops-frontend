@@ -13,7 +13,7 @@ type NativeProps = HTMLAttributes<HTMLSpanElement>;
 
 type BodyElementType = HTMLDivElement | HTMLSpanElement | HTMLParagraphElement;
 
-export type BodyVariant = 'primary' | 'secondary';
+export type BodyVariant = 'primary' | 'secondary' | 'button';
 
 export type BodyProps = Omit<NativeProps, 'color'> & {
 	tag?: BodyTagType;

@@ -20,7 +20,9 @@ export const ErrorPage = () => (
 					variant="transparent"
 					block
 				>
-					<Typography.Body fontSize="sm">Refresh</Typography.Body>
+					<Typography.Body fontSize="sm" variant="button">
+						Refresh
+					</Typography.Body>
 				</Button>
 				<Button
 					tag="a"
@@ -29,7 +31,9 @@ export const ErrorPage = () => (
 					replace
 					block
 				>
-					<Typography.Body fontSize="sm">Home</Typography.Body>
+					<Typography.Body fontSize="sm" variant="button">
+						Home
+					</Typography.Body>
 				</Button>
 			</div>
 		</div>

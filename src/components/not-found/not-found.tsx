@@ -16,7 +16,9 @@ const NotFoundPage = () => (
 			</Typography.Headlines>
 			<div className={css.button_wrapper}>
 				<Button tag="a" to={AppRoutes.Dashboard} variant="secondary" replace>
-					<Typography.Body fontSize="sm">Home</Typography.Body>
+					<Typography.Body fontSize="sm" variant="button">
+						Home
+					</Typography.Body>
 				</Button>
 			</div>
 		</div>
