@@ -9,6 +9,7 @@
 	"endOfLine": "lf",
 	"plugins": ["@trivago/prettier-plugin-sort-imports"],
 	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
 		"^~/app/(.*)$",
 		"^~/modules/(.*)$",
 		"^~/components/(.*)$",
@@ -19,7 +20,8 @@
 		"^~/lib/(.*)$",
 		"^~/assets/(.*)$",
 		"^~/styles/(.*)$",
-		"^[./]"
+		"^[./].*(?<!\\.(c|le|sc)ss)$",
+		"\\.(c|le|sc)ss$"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true

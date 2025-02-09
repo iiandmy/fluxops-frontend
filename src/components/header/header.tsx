@@ -7,6 +7,7 @@ import { useAppDispatch, useAppSelector } from '~/hooks';
 import { selectTheme, toggleTheme } from '~/store/theme';
 
 import { navItems } from './config';
+
 import css from './header.module.css';
 
 export const Header = () => {

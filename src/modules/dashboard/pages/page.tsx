@@ -8,6 +8,7 @@ import {
 	ResourceCapacity,
 	ScriptTemplates,
 } from '../widgets';
+
 import css from './page.module.css';
 
 const DashboardPage = () => {

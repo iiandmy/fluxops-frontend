@@ -5,6 +5,7 @@ import NotFoundImage from '~/assets/images/404.png';
 import { Button } from '../button';
 import { Image } from '../image';
 import { Typography } from '../typography';
+
 import css from './error.module.css';
 
 const ErrorPage = () => (

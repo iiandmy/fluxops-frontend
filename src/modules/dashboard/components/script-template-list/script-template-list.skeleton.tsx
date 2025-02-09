@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { FC } from 'react';
 
 import { ScriptTemplateItemSkeleton } from './script-template-item';
+
 import css from './script-template-list.module.css';
 
 const skeletonCount = 6;

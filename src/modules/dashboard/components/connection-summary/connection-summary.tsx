@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import css from './connection-summary.module.css';
 import { ConnectionSummarySkeleton } from './connection-summary.skeleton';
+
+import css from './connection-summary.module.css';
 
 interface IConnectionSummaryProps {
 	showSkeleton: boolean;

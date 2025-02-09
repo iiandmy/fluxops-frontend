@@ -3,8 +3,9 @@ import { FC } from 'react';
 import { Client } from '~/store/clients';
 
 import { ConnectionCard } from './connection-card';
-import css from './connection-list.module.css';
 import { ConnectionListSkeleton } from './connection-list.skeleton';
+
+import css from './connection-list.module.css';
 
 interface IConnectionListProps {
 	items: Client[];

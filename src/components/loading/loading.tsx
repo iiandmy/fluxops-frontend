@@ -1,4 +1,5 @@
 import { Typography } from '../typography';
+
 import css from './loading.module.css';
 
 export const LoadingPage = () => (

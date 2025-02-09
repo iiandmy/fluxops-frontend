@@ -4,8 +4,9 @@ import { Button } from '~/components';
 
 import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
 
-import css from './connection-filters.module.css';
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
+
+import css from './connection-filters.module.css';
 
 interface IConnectionFiltersProps {
 	values: ClientLabeledFilter[];
