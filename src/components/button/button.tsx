@@ -6,19 +6,22 @@ import css from './button.module.css';
 
 type ButtonVariant = 'primary' | 'secondary' | 'transparent';
 type ButtonSize = 'sm' | 'md' | 'lg';
-type ButtonShape = 'circle';
-type ButtonRender = 'link';
+type ButtonTagType = 'a' | 'button';
 type ButtonRadius = 'none' | 'sm' | 'md' | 'lg';
 
-interface IButtonProps extends ComponentProps<'button'> {
+interface ILinkProps {
+	to?: string;
+	replace?: boolean;
+}
+
+interface IButtonProps extends ComponentProps<'button'>, ILinkProps {
 	variant?: ButtonVariant;
 	size?: ButtonSize;
-	shape?: ButtonShape;
-	as?: ButtonRender;
+	tag?: ButtonTagType;
 	borderRadius?: ButtonRadius;
-	to?: string;
 	block?: boolean;
 	ghost?: boolean;
+	rounded?: boolean;
 }
 
 export const Button = forwardRef<
@@ -29,10 +32,11 @@ export const Button = forwardRef<
 		{
 			className,
 			variant = 'primary',
-			size = 'medium',
-			shape,
-			as,
+			size = 'md',
+			rounded = false,
+			tag = 'button',
 			to,
+			replace = false,
 			children,
 			block = false,
 			borderRadius = 'none',
@@ -45,16 +49,21 @@ export const Button = forwardRef<
 			css.default,
 			css[`button_variant_${variant}`],
 			css[`button_size_${size}`],
-			css[`button_shape_${shape}`],
 			css[`button_border_radius_${borderRadius}`],
 			{ [css.block]: block },
 			{ [css.ghost]: ghost },
+			{ [css.rounded]: rounded },
 			className
 		);
 
-		if (as === 'link' && to) {
+		if (tag === 'a' && to) {
 			return (
-				<Link to={to} className={computedClass} ref={ref as never}>
+				<Link
+					to={to}
+					className={computedClass}
+					ref={ref as never}
+					replace={replace}
+				>
 					{children}
 				</Link>
 			);

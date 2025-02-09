@@ -1,18 +1,20 @@
-import { ReactElement } from 'react';
+import { ReactElement, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { AppRoutes } from '~/constants';
-
-import { AutomationPage } from '~/modules/automation/pages';
-import { ClientsPage } from '~/modules/clients/pages';
-import { DashboardPage } from '~/modules/dashboard/pages';
-import { SettingsPage } from '~/modules/settings/pages';
-import { UsersPage } from '~/modules/users/pages';
 
 import { selectIsAuthorized } from '~/store/session';
 
 import { useAppSelector } from '~/hooks/index';
 
 import { BaseLayout } from './layout';
+
+const DashboardPage = lazy(() => import('~/modules/dashboard/pages'));
+const UsersPage = lazy(() => import('~/modules/users/pages'));
+const AutomationPage = lazy(() => import('~/modules/automation/pages'));
+const ClientsPage = lazy(() => import('~/modules/clients/pages'));
+const SettingsPage = lazy(() => import('~/modules/settings/pages'));
+const NotFoundPage = lazy(() => import('~/components/not-found'));
+const ErrorPage = lazy(() => import('~/components/error'));
 
 type GuestGuardedProps = {
 	children: ReactElement;
@@ -43,8 +45,7 @@ export const appRouter = () =>
 	createBrowserRouter([
 		{
 			element: BaseLayout,
-			errorElement: <div>error</div>,
-			loader: async () => await (<>123</>),
+			errorElement: <ErrorPage />,
 			children: [
 				{
 					path: AppRoutes.Login,
@@ -95,5 +96,9 @@ export const appRouter = () =>
 					),
 				},
 			],
+		},
+		{
+			path: AppRoutes.NotFound,
+			element: <NotFoundPage />,
 		},
 	]);

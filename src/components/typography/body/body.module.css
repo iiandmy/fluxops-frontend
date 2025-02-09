@@ -10,3 +10,7 @@
 .secondary {
 	color: var(--color-light-text-secondary);
 }
+
+.button {
+	color: var(--color-light-text-button-secondary);
+}

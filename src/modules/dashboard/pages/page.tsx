@@ -10,7 +10,7 @@ import {
 } from '../widgets';
 import css from './page.module.css';
 
-export const DashboardPage = () => {
+const DashboardPage = () => {
 	useTitle(PageTitle.Dashboard);
 
 	return (
@@ -27,3 +27,5 @@ export const DashboardPage = () => {
 		</GenericWrapper>
 	);
 };
+
+export default DashboardPage;

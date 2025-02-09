@@ -10,4 +10,4 @@ export type FontSize =
 	| '3xl'
 	| '4xl';
 
-export type LineHeight = 'lg' | '2xl';
+export type LineHeight = 'lg' | '2xl' | 'auto';

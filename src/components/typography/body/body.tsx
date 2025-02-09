@@ -13,7 +13,7 @@ type NativeProps = HTMLAttributes<HTMLSpanElement>;
 
 type BodyElementType = HTMLDivElement | HTMLSpanElement | HTMLParagraphElement;
 
-export type BodyVariant = 'primary' | 'secondary';
+export type BodyVariant = 'primary' | 'secondary' | 'button';
 
 export type BodyProps = Omit<NativeProps, 'color'> & {
 	tag?: BodyTagType;
@@ -31,7 +31,7 @@ export const Body = forwardRef<BodyElementType, BodyProps>(
 			tag: Component = 'span',
 			variant = 'primary',
 			fontSize = 'md',
-			lineHeight = '2xl',
+			lineHeight = 'auto',
 			weight = 'regular',
 			className,
 			children,

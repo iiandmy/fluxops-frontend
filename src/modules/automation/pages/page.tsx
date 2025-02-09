@@ -3,8 +3,10 @@ import { useTitle } from '~/hooks';
 
 import css from './page.module.css';
 
-export const AutomationPage = () => {
+const AutomationPage = () => {
 	useTitle(PageTitle.Automation);
 
 	return <div className={css.root}>AutomationPage</div>;
 };
+
+export default AutomationPage;

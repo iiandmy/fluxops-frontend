@@ -1,3 +1,8 @@
-import { Header, Layout } from '~/components';
+import { Suspense } from 'react';
+import { Header, Layout, LoadingPage } from '~/components';
 
-export const BaseLayout = <Layout headerSlot={<Header />} />;
+export const BaseLayout = (
+	<Suspense fallback={<LoadingPage />}>
+		<Layout headerSlot={<Header />} />
+	</Suspense>
+);
