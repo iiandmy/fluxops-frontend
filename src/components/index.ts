@@ -1,6 +1,5 @@
 export { Image } from './image';
 export { LoadingPage } from './loading';
-export { ErrorPage } from './error';
 export { Typography } from './typography';
 export { GenericWrapper } from './generic-wrapper';
 export { Section } from './section';

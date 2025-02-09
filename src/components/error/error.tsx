@@ -7,7 +7,7 @@ import { Image } from '../image';
 import { Typography } from '../typography';
 import css from './error.module.css';
 
-export const ErrorPage = () => (
+const ErrorPage = () => (
 	<div className={css.wrapper}>
 		<div className={css.content}>
 			<Image src={NotFoundImage} width={600} height={280} />
@@ -39,3 +39,5 @@ export const ErrorPage = () => (
 		</div>
 	</div>
 );
+
+export default ErrorPage;

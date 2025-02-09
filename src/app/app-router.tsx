@@ -1,6 +1,5 @@
 import { ReactElement, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
-import { ErrorPage } from '~/components';
 import { AppRoutes } from '~/constants';
 
 import { selectIsAuthorized } from '~/store/session';
@@ -9,12 +8,13 @@ import { useAppSelector } from '~/hooks/index';
 
 import { BaseLayout } from './layout';
 
-const DashboardPage = lazy(() => import('~/modules/dashboard/pages/page'));
-const UsersPage = lazy(() => import('~/modules/users/pages/page'));
-const AutomationPage = lazy(() => import('~/modules/automation/pages/page'));
-const ClientsPage = lazy(() => import('~/modules/clients/pages/page'));
-const SettingsPage = lazy(() => import('~/modules/settings/pages/page'));
-const NotFoundPage = lazy(() => import('~/components/not-found/not-found'));
+const DashboardPage = lazy(() => import('~/modules/dashboard/pages'));
+const UsersPage = lazy(() => import('~/modules/users/pages'));
+const AutomationPage = lazy(() => import('~/modules/automation/pages'));
+const ClientsPage = lazy(() => import('~/modules/clients/pages'));
+const SettingsPage = lazy(() => import('~/modules/settings/pages'));
+const NotFoundPage = lazy(() => import('~/components/not-found'));
+const ErrorPage = lazy(() => import('~/components/error'));
 
 type GuestGuardedProps = {
 	children: ReactElement;

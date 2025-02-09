@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ComponentProps, forwardRef, useState } from 'react';
+import { ERROR_FALLBACK_URL, LOADING_FALLBACK_URL } from '~/constants';
 
-import { ERROR_FALLBACK_URL, LOADING_FALLBACK_URL } from './config';
 import css from './image.module.css';
 
 type ObjectFitType = 'none' | 'cover' | 'fill' | 'contain';
