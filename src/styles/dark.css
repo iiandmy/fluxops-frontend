@@ -15,6 +15,7 @@
 	--color-light-bg-button-transparent-hover: var(
 		--color-dark-bg-button-transparent-hover
 	);
+	--color-light-bg-input-primary: var(--color-dark-bg-input-primary);
 
 	/* text */
 
@@ -26,4 +27,9 @@
 		--color-dark-text-button-transparent
 	);
 	--color-light-text-logo: var(--color-dark-text-logo);
+
+	/* border */
+
+	--color-light-border-primary: var(--color-dark-border-primary);
+	--color-light-border-transparent: var(--color-dark-border-transparent);
 }

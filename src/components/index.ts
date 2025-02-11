@@ -1,3 +1,4 @@
+export { Input } from './input';
 export { Image } from './image';
 export { LoadingPage } from './loading';
 export { Typography } from './typography';

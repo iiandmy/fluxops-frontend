@@ -36,7 +36,8 @@ li {
 
 a,
 button,
-input {
+input,
+input::placeholder {
 	font-family: inherit;
 	font-weight: inherit;
 }
@@ -135,6 +136,7 @@ input {
 	--color-light-bg-button-secondary-hover: rgba(237, 237, 237, 10%);
 	--color-light-bg-button-transparent-hover: rgba(237, 237, 237, 10%);
 	--color-light-bg-muted: #ececec;
+	--color-light-bg-input-primary: #ededed;
 
 	/* dark */
 
@@ -146,6 +148,7 @@ input {
 	--color-dark-bg-button-secondary-hover: rgba(49, 48, 52, 10%);
 	--color-dark-bg-button-transparent-hover: rgba(237, 237, 237, 10%);
 	--color-dark-bg-muted: #808080;
+	--color-dark-bg-input-primary: #313034;
 }
 
 :root {
@@ -177,6 +180,20 @@ input {
 }
 
 :root {
+	/* border  */
+
+	/* light */
+
+	--color-light-border-primary: #808080;
+	--color-light-border-transparent: #ededed;
+
+	/* dark */
+
+	--color-dark-border-primary: #808080;
+	--color-dark-border-transparent: #808080;
+}
+
+:root {
 	/* static */
 
 	--color-icon-muted: #808080;
@@ -188,4 +205,6 @@ input {
 	--color-status-success: #95f3a6;
 	--color-status-pending: #faef59;
 	--color-status-failure: #ff6e6e;
+	--color-input-status-success: #6cbdff;
+	--color-input-status-error: #ff6e6e;
 }
