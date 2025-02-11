@@ -2,18 +2,27 @@ import { FC } from 'react';
 
 import { CommandLog } from '~/modules/dashboard/types';
 
-import { CommandLogItem } from './command-log-item';
+import { List } from '~/components';
 
-import css from './command-log-list.module.css';
+import { CommandLogItem } from './command-log-item';
+import { CommandLogListSkeleton } from './command-log-list.skeleton';
 
 interface ICommandLogListProps {
 	items: CommandLog[];
+	showSkeleton?: boolean;
 }
 
-export const CommandLogList: FC<ICommandLogListProps> = ({ items }) => (
-	<div className={css.list_wrapper}>
-		{items.map((item) => (
-			<CommandLogItem key={item.id} item={item} />
-		))}
-	</div>
-);
+export const CommandLogList: FC<ICommandLogListProps> = ({
+	items,
+	showSkeleton = true,
+}) => {
+	if (showSkeleton) return <CommandLogListSkeleton />;
+
+	return (
+		<List block>
+			{items.map((item) => (
+				<CommandLogItem key={item.id} item={item} />
+			))}
+		</List>
+	);
+};

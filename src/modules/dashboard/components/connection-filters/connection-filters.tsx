@@ -3,7 +3,7 @@ import { ComponentProps, FC } from 'react';
 
 import { ClientFilter, ClientLabeledFilter } from '~/modules/dashboard/types';
 
-import { Button } from '~/components';
+import { Button, List } from '~/components';
 
 import { ConnectionFiltersSkeleton } from './connection-filters.skeleton';
 
@@ -45,7 +45,7 @@ export const ConnectionFilters: FC<IConnectionFiltersProps> = ({
 	if (showSkeleton) return <ConnectionFiltersSkeleton />;
 
 	return (
-		<div className={css.wrapper}>
+		<List className={css.wrapper} direction="horizontal" gap="xl">
 			{values.map((filter) => (
 				<ConnectionFilterItem
 					key={filter.value}
@@ -56,6 +56,6 @@ export const ConnectionFilters: FC<IConnectionFiltersProps> = ({
 					}
 				/>
 			))}
-		</div>
+		</List>
 	);
 };
