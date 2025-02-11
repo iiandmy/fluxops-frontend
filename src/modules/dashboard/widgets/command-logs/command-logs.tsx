@@ -17,6 +17,6 @@ export const CommandLogs = () => (
 		headerClassName={css.header}
 		rightHeaderAddon={<FaRegCircle color="var(--color-icon-muted)" />}
 	>
-		<CommandLogList items={commandLogs} />
+		<CommandLogList items={commandLogs} showSkeleton={false} />
 	</Section>
 );

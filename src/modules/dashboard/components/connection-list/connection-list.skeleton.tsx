@@ -1,13 +1,13 @@
-import { ConnectionCardSkeleton } from './connection-card';
+import { List } from '~/components';
 
-import css from './connection-list.module.css';
+import { ConnectionCardSkeleton } from './connection-card';
 
 const skeletonCount = 8;
 
 export const ConnectionListSkeleton = () => (
-	<div className={css.list_wrapper}>
+	<List block>
 		{[...Array(skeletonCount)].map((_, key) => (
 			<ConnectionCardSkeleton key={key} />
 		))}
-	</div>
+	</List>
 );
