@@ -16,6 +16,7 @@ interface IInputProps extends Omit<ComponentProps<'input'>, 'size'> {
 	status?: InputStatus;
 	label?: string;
 	icon?: ReactNode;
+	block?: boolean;
 }
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
@@ -28,6 +29,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
 			status,
 			label,
 			icon,
+			block = false,
 			...restProps
 		},
 		ref
@@ -44,6 +46,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
 						css[`input_${variant}`],
 						css[`input_${status}`],
 						{ [css.with_icon]: !!icon },
+						{ [css.block]: block },
 						className
 					)}
 					{...restProps}
