@@ -1,0 +1,35 @@
+.gap_3xs {
+	gap: var(--gap-3xs);
+}
+
+.gap_2xs {
+	gap: var(--gap-2xs);
+}
+
+.gap_xs {
+	gap: var(--gap-xs);
+}
+
+.gap_sm {
+	gap: var(--gap-s);
+}
+
+.gap_md {
+	gap: var(--gap-m);
+}
+
+.gap_lg {
+	gap: var(--gap-l);
+}
+
+.gap_xl {
+	gap: var(--gap-xl);
+}
+
+.gap_2xl {
+	gap: var(--gap-2xl);
+}
+
+.gap_3xl {
+	gap: var(--gap-3xl);
+}
