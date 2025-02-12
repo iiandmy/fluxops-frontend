@@ -4,6 +4,8 @@ export enum AppRoutes {
 	Automation = '/automation',
 	Users = '/users',
 	Settings = '/settings',
-	Login = '/login',
+	Auth = '/auth',
+	SignIn = Auth + '/sign_in',
+	SignUp = Auth + '/sign_up',
 	NotFound = '*',
 }

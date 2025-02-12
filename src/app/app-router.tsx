@@ -1,13 +1,10 @@
-import { ReactElement, lazy } from 'react';
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { lazy } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
 
 import { AppRoutes } from '~/constants';
 
-import { selectIsAuthorized } from '~/store/session';
-
-import { useAppSelector } from '~/hooks/index';
-
-import { BaseLayout } from './layout';
+import { AuthGuard, GuestGuard } from './components';
+import { AuthLayout, BaseLayout } from './layout';
 
 const DashboardPage = lazy(() => import('~/modules/dashboard/pages'));
 const UsersPage = lazy(() => import('~/modules/users/pages'));
@@ -16,31 +13,8 @@ const ClientsPage = lazy(() => import('~/modules/clients/pages'));
 const SettingsPage = lazy(() => import('~/modules/settings/pages'));
 const NotFoundPage = lazy(() => import('~/components/not-found'));
 const ErrorPage = lazy(() => import('~/components/error'));
-
-type GuestGuardedProps = {
-	children: ReactElement;
-};
-
-const GuestGuard = ({ children }: GuestGuardedProps) => {
-	// MOCK
-	const isAuthorized = useAppSelector(selectIsAuthorized);
-
-	if (!isAuthorized) return <Navigate to="/login" />;
-
-	return children;
-};
-
-type AuthGuardedProps = {
-	children: ReactElement;
-};
-
-const AuthGuard = ({ children }: AuthGuardedProps) => {
-	const isAuthorized = useAppSelector(selectIsAuthorized);
-
-	if (isAuthorized) return <Navigate to="/" />;
-
-	return children;
-};
+const SignInPage = lazy(() => import('~/modules/auth/pages/sign-in'));
+const SignUpPage = lazy(() => import('~/modules/auth/pages/sign-up'));
 
 export const appRouter = () =>
 	createBrowserRouter([
@@ -48,14 +22,6 @@ export const appRouter = () =>
 			element: BaseLayout,
 			errorElement: <ErrorPage />,
 			children: [
-				{
-					path: AppRoutes.Login,
-					element: (
-						<AuthGuard>
-							<div>login</div>
-						</AuthGuard>
-					),
-				},
 				{
 					path: AppRoutes.Dashboard,
 					element: (
@@ -94,6 +60,29 @@ export const appRouter = () =>
 						<GuestGuard>
 							<SettingsPage />
 						</GuestGuard>
+					),
+				},
+			],
+		},
+		{
+			element: AuthLayout,
+			path: AppRoutes.Auth,
+			errorElement: <ErrorPage />,
+			children: [
+				{
+					path: AppRoutes.SignIn,
+					element: (
+						<AuthGuard>
+							<SignInPage />
+						</AuthGuard>
+					),
+				},
+				{
+					path: AppRoutes.SignUp,
+					element: (
+						<AuthGuard>
+							<SignUpPage />
+						</AuthGuard>
 					),
 				},
 			],

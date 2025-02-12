@@ -1,0 +1,39 @@
+.auth_form_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-xl);
+}
+
+.form_wrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+}
+
+.action_button {
+	width: 220px;
+	font-size: var(--font-size-md);
+}
+
+.form_header {
+	color: var(--color-light-text-logo);
+	text-align: center;
+}
+
+.form_content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-3xl);
+}
+
+.form_footer {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-l);
+	align-items: center;
+
+	width: 100%;
+}
