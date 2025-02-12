@@ -1,0 +1,11 @@
+.card_wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 460px;
+	min-height: 650px;
+	padding: calc(var(--gap-2xl) * 2) calc(var(--gap-2xl) + var(--gap-2xs));
+
+	background-color: var(--color-light-bg-primary);
+	box-shadow: var(--shadow-lg);
+}

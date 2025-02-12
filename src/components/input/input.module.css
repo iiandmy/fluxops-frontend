@@ -61,10 +61,6 @@
 	color: var(--color-light-text-secondary);
 }
 
-.input_primary:focus {
-	border-color: var(--color-light-border-primary);
-}
-
 .input_transparent {
 	border-color: var(--color-light-border-transparent);
 	color: var(--color-light-text-primary);
