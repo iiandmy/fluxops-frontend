@@ -1,0 +1,94 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-xs);
+	align-items: flex-start;
+}
+
+.input_wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	left: var(--gap-xs);
+	transform: translateY(-50%);
+}
+
+.input {
+	border: none;
+	border-bottom: 1px solid transparent;
+
+	font-size: var(--font-size-md);
+	font-weight: inherit;
+	line-height: var(--line-height-2xl);
+
+	outline: none;
+
+	transition: all 0.3s linear;
+}
+
+.input::placeholder {
+	font: inherit;
+}
+
+/* size */
+
+/* TODO: need to specify paddings */
+
+.input_sm {
+	padding: var(--gap-3xs) var(--gap-s);
+}
+
+.input_md {
+	padding: var(--gap-2xs) var(--gap-l);
+}
+
+.input_lg {
+	padding: var(--gap-s) var(--gap-xl);
+}
+
+/* variant */
+
+.input_primary {
+	color: var(--color-light-text-primary);
+	background-color: var(--color-light-bg-input-primary);
+}
+
+.input_primary::placeholder {
+	color: var(--color-light-text-secondary);
+}
+
+.input_primary:focus {
+	border-color: var(--color-light-border-primary);
+}
+
+.input_transparent {
+	border-color: var(--color-light-border-transparent);
+	color: var(--color-light-text-primary);
+	background-color: transparent;
+}
+
+.input_transparent::placeholder {
+	color: var(--color-light-text-secondary);
+}
+
+/* status */
+
+.input_success {
+	border-color: var(--color-input-status-success);
+}
+
+.input_error {
+	border-color: var(--color-input-status-error);
+}
+
+.with_icon {
+	padding-left: var(--gap-2xl);
+}
+
+.block {
+	width: 100%;
+}
