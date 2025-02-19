@@ -58,7 +58,7 @@
 }
 
 .button_size_lg {
-	padding: var(--gap-l);
+	padding: var(--gap-lg);
 }
 
 /* border radius */
@@ -68,15 +68,15 @@
 }
 
 .button_border_radius_sm {
-	border-radius: var(--border-radius-s);
+	border-radius: var(--border-radius-sm);
 }
 
 .button_border_radius_md {
-	border-radius: var(--border-radius-m);
+	border-radius: var(--border-radius-md);
 }
 
 .button_border_radius_lg {
-	border-radius: var(--border-radius-l);
+	border-radius: var(--border-radius-lg);
 }
 
 .rounded {
@@ -85,4 +85,14 @@
 
 .ghost:hover {
 	background-color: initial;
+}
+
+.disabled {
+	cursor: default;
+	color: var(--color-light-text-secondary);
+	background-color: var(--color-light-bg-button-secondary);
+}
+
+.disabled:hover {
+	background-color: var(--color-light-bg-button-secondary);
 }
