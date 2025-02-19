@@ -17,16 +17,54 @@ type BodyElementType = HTMLDivElement | HTMLSpanElement | HTMLParagraphElement;
 export type BodyVariant = 'primary' | 'secondary' | 'button';
 
 export type BodyProps = Omit<NativeProps, 'color'> & {
+	/**
+	 * Specify the tag render of the text element. Currently
+	 * supports the following: `div`, `span`, `p`<br>
+	 * default is `span`
+	 */
 	tag?: BodyTagType;
+
+	/**
+	 * Specify the variant of the text. Currently
+	 * supports the following: `primary`, `secondary`, `button`<br>
+	 * default is `primary`
+	 */
 	variant?: BodyVariant;
+
+	/**
+	 * Specify the font size of the text. Currently
+	 * supports the following: `3xs`, `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`,`4xl`<br>
+	 * default is `md`
+	 */
 	fontSize?: FontSize;
+
+	/**
+	 * Specify the line height of the text. Currently
+	 * supports the following:  `auto`, `lg`, `2xl`<br>
+	 * default is `auto`
+	 */
 	lineHeight?: LineHeight;
+
+	/**
+	 * Specify the font weight of the text. Currently
+	 * supports the following:  `bold`, `regular`, `light`, `medium`<br>
+	 * default is `regular`
+	 */
 	weight?: 'bold' | 'regular' | 'light' | 'medium';
+
+	/**
+	 * Specify an optional className to be applied to
+	 * the text element.
+	 */
 	className?: string;
+
+	/**
+	 * Specify children to render them inside Body element.
+	 */
 	children?: ReactNode;
 };
 
-export const Body = forwardRef<BodyElementType, BodyProps>(
+const Body = forwardRef<BodyElementType, BodyProps>(
 	(
 		{
 			tag: Component = 'span',
@@ -56,3 +94,5 @@ export const Body = forwardRef<BodyElementType, BodyProps>(
 		</Component>
 	)
 );
+
+export default Body;

@@ -16,13 +16,47 @@ type HeadlinesElementType = HTMLDivElement | HTMLHeadingElement;
 
 export type HeadlinesVariant = 'primary' | 'secondary';
 
-export type HeadlinesProps = Omit<NativeProps, 'color'> & {
+type HeadlinesProps = Omit<NativeProps, 'color'> & {
+	/**
+	 * Specify the tag render of the heading element. Currently
+	 * supports the following: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `div`,<br>
+	 * default is `div`
+	 */
 	tag?: HeadlinesTagType;
+
+	/**
+	 * Specify the variant of the heading. Currently
+	 * supports the following: `primary`, `secondary`<br>
+	 * default is `primary`
+	 */
 	variant?: HeadlinesVariant;
+	/**
+	 * Specify the font size of the heading. Currently
+	 * supports the following: `3xs`, `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`,`4xl`<br>
+	 * default is `md`
+	 */
 	fontSize?: FontSize;
+	/**
+	 * Specify the line height of the heading. Currently
+	 * supports the following:  `auto`, `lg`, `2xl`<br>
+	 * default is `auto`
+	 */
 	lineHeight?: LineHeight;
+	/**
+	 * Specify the font weight of the heading. Currently
+	 * supports the following:  `bold`, `regular`, `light`, `medium`<br>
+	 * default is `regular`
+	 */
 	weight?: 'bold' | 'regular' | 'light' | 'medium';
+	/**
+	 * Specify an optional className to be applied to
+	 * the heading element.
+	 */
 	className?: string;
+
+	/**
+	 * Specify children to render them inside heading element.
+	 */
 	children?: ReactNode;
 };
 
@@ -56,3 +90,5 @@ export const Headlines = forwardRef<HeadlinesElementType, HeadlinesProps>(
 		</Component>
 	)
 );
+
+export default Headlines;
