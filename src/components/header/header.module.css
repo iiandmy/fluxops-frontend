@@ -1,6 +1,6 @@
 .wrapper {
 	height: 80px;
-	padding: var(--gap-m) var(--gap-l);
+	padding: var(--gap-m) var(--gap-lg);
 	box-shadow: var(--shadow-lg);
 }
 
@@ -13,7 +13,7 @@
 
 .content_container {
 	display: flex;
-	gap: var(--gap-l);
+	gap: var(--gap-lg);
 	align-items: center;
 }
 

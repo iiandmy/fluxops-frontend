@@ -1,0 +1,144 @@
+import { ArgTypes, Canvas, Meta, Typeset } from '@storybook/blocks';
+
+import Headlines from './headlines';
+import * as HeadlinesStories from './headlines.stories';
+
+<Meta of={HeadlinesStories} title="Headlines" />
+
+export const typography = {
+	weight: {
+		light: '300',
+		regular: '400',
+		medium: '500',
+		bold: '700',
+	},
+	size: {
+		'3xs': 6,
+		'2xs': 8,
+		xs: 12,
+		sm: 16,
+		md: 21,
+		lg: 26,
+		xl: 30,
+		'2xl': 36,
+		'3xl': 40,
+		'4xl': 46,
+	},
+};
+
+# Headlines
+
+{/* <!-- START doctoc generated TOC please keep comment here to allow auto update --> */}
+{/* <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> */}
+
+## Table of contents
+
+- [Overview](#overview)
+- [Component API](#component-api)
+- [Component Variants](#headlines-variants)
+
+{/* <!-- END doctoc generated TOC please keep comment here to allow auto update --> */}
+
+## Overview
+
+<Canvas>
+	<Headlines />
+</Canvas>
+
+## Component API
+
+<ArgTypes of={HeadlinesStories} />
+
+## Headlines variants
+
+### Sizes
+
+**Font:** Geologica
+
+<Typeset
+	sampleText={<Headlines fontSize="3xs">Heading</Headlines>}
+	fontSizes={[Number(typography.size['3xs'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="2xs">Heading</Headlines>}
+	fontSizes={[Number(typography.size['2xs'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="xs">Heading</Headlines>}
+	fontSizes={[Number(typography.size['xs'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="sm">Heading</Headlines>}
+	fontSizes={[Number(typography.size['sm'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="md">Heading</Headlines>}
+	fontSizes={[Number(typography.size['md'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="lg">Heading</Headlines>}
+	fontSizes={[Number(typography.size['lg'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="xl">Heading</Headlines>}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="2xl">Heading</Headlines>}
+	fontSizes={[Number(typography.size['2xl'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="3xl">Heading</Headlines>}
+	fontSizes={[Number(typography.size['3xl'])]}
+/>
+
+<Typeset
+	sampleText={<Headlines fontSize="4xl">Heading</Headlines>}
+	fontSizes={[Number(typography.size['4xl'])]}
+/>
+
+### Weights
+
+<Typeset
+	sampleText={
+		<Headlines fontSize="xl" weight="light">
+			Heading
+		</Headlines>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+<Typeset
+	sampleText={
+		<Headlines fontSize="xl" weight="regular">
+			Heading
+		</Headlines>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+<Typeset
+	sampleText={
+		<Headlines fontSize="xl" weight="medium">
+			Heading
+		</Headlines>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+<Typeset
+	sampleText={
+		<Headlines fontSize="xl" weight="bold">
+			Heading
+		</Headlines>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>

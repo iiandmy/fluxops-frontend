@@ -16,7 +16,9 @@
 		"stylelint": "npx stylelint ./src/**/*.css --allow-empty-input",
 		"stylelint:fix": "npx stylelint src/**/*.css --fix --max-warnings 0 --allow-empty-input",
 		"lint:all": "prettier -w . && npx stylelint src/**/*.css --fix --max-warnings --allow-empty-input 0 && eslint . --fix",
-		"check": "eslint . && prettier -c . && npx stylelint '**/*.css' && tsc -b && vite build"
+		"check": "eslint . && prettier -c . && npx stylelint '**/*.css' && tsc -b && vite build",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.5.0",
@@ -32,7 +34,17 @@
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {
+		"@chromatic-com/storybook": "^3.2.4",
 		"@eslint/js": "^9.17.0",
+		"@storybook/addon-docs": "^8.5.5",
+		"@storybook/addon-essentials": "^8.5.4",
+		"@storybook/addon-interactions": "^8.5.4",
+		"@storybook/addon-onboarding": "^8.5.4",
+		"@storybook/addon-themes": "^8.5.4",
+		"@storybook/blocks": "^8.5.4",
+		"@storybook/react": "^8.5.4",
+		"@storybook/react-vite": "^8.5.4",
+		"@storybook/test": "^8.5.4",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.1",
 		"@types/react": "^18.3.18",
 		"@types/react-dom": "^18.3.5",
@@ -47,10 +59,12 @@
 		"eslint-plugin-react": "^7.37.4",
 		"eslint-plugin-react-hooks": "^4.3.0",
 		"eslint-plugin-react-refresh": "^0.4.16",
+		"eslint-plugin-storybook": "^0.11.2",
 		"globals": "^15.14.0",
 		"husky": "^8.0.0",
 		"lint-staged": "^15.4.2",
 		"prettier": "^3.4.2",
+		"storybook": "^8.5.4",
 		"stylelint": "^16.14.0",
 		"stylelint-config-clean-order": "^7.0.0",
 		"stylelint-config-standard": "^37.0.0",
@@ -63,7 +77,8 @@
 	"eslintConfig": {
 		"extends": [
 			"airbnb",
-			"airbnb-typescript"
+			"airbnb-typescript",
+			"plugin:storybook/recommended"
 		]
 	},
 	"lint-staged": {

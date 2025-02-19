@@ -1,0 +1,215 @@
+import { ArgTypes, Canvas, Meta, Typeset } from '@storybook/blocks';
+
+import Body from './body';
+import * as BodyStories from './body.stories';
+
+<Meta of={BodyStories} title="Body" />
+
+export const typography = {
+	weight: {
+		light: '300',
+		regular: '400',
+		medium: '500',
+		bold: '700',
+	},
+	size: {
+		'3xs': 6,
+		'2xs': 8,
+		xs: 12,
+		sm: 16,
+		md: 21,
+		lg: 26,
+		xl: 30,
+		'2xl': 36,
+		'3xl': 40,
+		'4xl': 46,
+	},
+};
+
+# Body
+
+{/* <!-- START doctoc generated TOC please keep comment here to allow auto update --> */}
+{/* <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> */}
+
+## Table of contents
+
+- [Overview](#overview)
+- [Component API](#component-api)
+- [Component Variants](#body-variants)
+
+{/* <!-- END doctoc generated TOC please keep comment here to allow auto update --> */}
+
+## Overview
+
+<Canvas>
+	<Body />
+</Canvas>
+
+## Component API
+
+<ArgTypes of={BodyStories} />
+
+## Body variants
+
+### Sizes
+
+**Font:** Geologica
+
+#### 3xs
+
+<Typeset
+	sampleText={
+		<Body fontSize="3xs">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['3xs'])]}
+/>
+
+#### 2xs
+
+<Typeset
+	sampleText={
+		<Body fontSize="2xs">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['2xs'])]}
+/>
+
+#### xs
+
+<Typeset
+	sampleText={
+		<Body fontSize="xs">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xs'])]}
+/>
+
+#### sm
+
+<Typeset
+	sampleText={
+		<Body fontSize="sm">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['sm'])]}
+/>
+
+#### md
+
+<Typeset
+	sampleText={
+		<Body fontSize="md">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['md'])]}
+/>
+
+#### lg
+
+<Typeset
+	sampleText={
+		<Body fontSize="lg">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['lg'])]}
+/>
+
+#### xl
+
+<Typeset
+	sampleText={
+		<Body fontSize="xl">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+#### 2xl
+
+<Typeset
+	sampleText={
+		<Body fontSize="2xl">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['2xl'])]}
+/>
+
+#### 3xl
+
+<Typeset
+	sampleText={
+		<Body fontSize="3xl">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['3xl'])]}
+/>
+
+#### 4xl
+
+<Typeset
+	sampleText={
+		<Body fontSize="4xl">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['4xl'])]}
+/>
+
+### Weights
+
+#### light
+
+<Typeset
+	sampleText={
+		<Body fontSize="xl" weight="light">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+
+/>
+
+#### regular
+
+<Typeset
+	sampleText={
+		<Body fontSize="xl" weight="regular">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+
+/>
+
+#### medium
+
+<Typeset
+	sampleText={
+		<Body fontSize="xl" weight="medium">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+/>
+
+#### bold
+
+<Typeset
+	sampleText={
+		<Body fontSize="xl" weight="bold">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+		</Body>
+	}
+	fontSizes={[Number(typography.size['xl'])]}
+
+/>

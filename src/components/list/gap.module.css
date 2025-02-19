@@ -19,7 +19,7 @@
 }
 
 .gap_lg {
-	gap: var(--gap-l);
+	gap: var(--gap-lg);
 }
 
 .gap_xl {

@@ -8,13 +8,13 @@
 .content {
 	display: flex;
 	flex-direction: column;
-	gap: var(--gap-l);
+	gap: var(--gap-lg);
 	align-items: center;
 }
 
 .buttons_wrapper {
 	display: flex;
-	gap: var(--gap-l);
+	gap: var(--gap-lg);
 	align-items: center;
 	justify-content: space-between;
 

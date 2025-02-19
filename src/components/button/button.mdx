@@ -1,0 +1,30 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import Button from './button';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} title="Button" />
+
+# Button
+
+{/* <!-- START doctoc generated TOC please keep comment here to allow auto update --> */}
+{/* <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> */}
+
+## Table of contents
+
+- [Overview](#overview)
+- [Component API](#component-api)
+
+{/* <!-- END doctoc generated TOC please keep comment here to allow auto update --> */}
+
+## Overview
+
+<Canvas>
+	<Button>Button</Button>
+</Canvas>
+
+## Component API
+
+<ArgTypes of={ButtonStories} />
+
+Additional props passed into `Button` will be forwarded along to the button.
