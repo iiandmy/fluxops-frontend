@@ -10,16 +10,55 @@ type InputSize = 'sm' | 'md' | 'lg';
 type InputStatus = 'error' | 'success';
 
 interface IInputProps extends Omit<ComponentProps<'input'>, 'size'> {
+	/**
+	 * Specify an optional validation error text to render under Input.
+	 */
 	errorText?: string;
+
+	/**
+	 * Specify the variant of the Button. Currently
+	 * supports the following: `primary`, `transparent`<br>
+	 * default is `primary`
+	 */
 	variant?: InputVariant;
+
+	/**
+	 * Specify the size of the Input. Currently
+	 * supports the following: `sm`, `md`, `lg`<br>
+	 * default `md`
+	 */
 	size?: InputSize;
+
+	/**
+	 * Specify the validation status of Input. Currently
+	 * supports the folowing: `error`, `success`
+	 */
 	status?: InputStatus;
+
+	/**
+	 * Specify an optional label text to render above Input.
+	 */
 	label?: string;
+
+	/**
+	 * Specify an optional icon to render it inside Input.
+	 */
 	icon?: ReactNode;
+
+	/**
+	 * Specify if the Input should be 100% width of parent block.<br>
+	 * default is `false`
+	 */
 	block?: boolean;
+
+	/**
+	 * Specify an optional className to be applied to
+	 * the input.
+	 */
+	className?: string;
 }
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
+const Input = forwardRef<HTMLInputElement, IInputProps>(
 	(
 		{
 			className,
@@ -60,3 +99,5 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
 		</div>
 	)
 );
+
+export default Input;
