@@ -2,7 +2,7 @@
 	display: grid;
 	grid-auto-rows: 100%;
 	grid-template-columns: 4fr max-content 5fr;
-	gap: 0 var(--gap-l);
+	gap: 0 var(--gap-lg);
 
 	height: 100%;
 }

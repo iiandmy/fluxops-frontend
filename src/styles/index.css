@@ -72,9 +72,9 @@ input::placeholder {
 :root {
 	/* border radius */
 
-	--border-radius-s: 6px;
-	--border-radius-m: 8px;
-	--border-radius-l: 12px;
+	--border-radius-sm: 6px;
+	--border-radius-md: 8px;
+	--border-radius-lg: 12px;
 }
 
 :root {
@@ -85,7 +85,7 @@ input::placeholder {
 	--gap-xs: 8px;
 	--gap-s: 12px;
 	--gap-m: 16px;
-	--gap-l: 20px;
+	--gap-lg: 20px;
 	--gap-xl: 24px;
 	--gap-2xl: 30px;
 	--gap-3xl: 40px;
@@ -103,7 +103,7 @@ input::placeholder {
 	--font-size-xl: 30px;
 	--font-size-2xl: 36px;
 	--font-size-3xl: 40px;
-	--font-size-3xl: 46px;
+	--font-size-4xl: 46px;
 }
 
 :root {

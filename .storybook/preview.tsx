@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import '../src/styles/dark.css';
 import '../src/styles/index.css';
+import './storybook-global.css';
 
 const preview: Preview = {
 	parameters: {
@@ -11,6 +12,8 @@ const preview: Preview = {
 				color: /(background|color)$/i,
 				date: /Date$/i,
 			},
+			expanded: true,
+			hideNoControlsWarning: true,
 		},
 	},
 	decorators: [
@@ -19,24 +22,26 @@ const preview: Preview = {
 
 			return (
 				<div className={cn({ dark: theme === 'dark' })}>
-					<Story />
+					<div className="story_container">
+						<Story />
+					</div>
 				</div>
 			);
 		},
 	],
-};
-
-export const globalTypes = {
-	theme: {
-		name: 'Theme',
-		description: 'Theme for components',
-		defaultValue: 'light',
-		toolbar: {
-			items: [
-				{ value: 'light', icon: 'sun', title: 'light' },
-				{ value: 'dark', icon: 'moon', title: 'dark' },
-			],
-			showName: true,
+	globalTypes: {
+		theme: {
+			name: 'Theme',
+			description: 'Set the global theme for displaying components',
+			defaultValue: 'light',
+			toolbar: {
+				icon: 'paintbrush',
+				items: [
+					{ value: 'light', icon: 'sun', title: 'light' },
+					{ value: 'dark', icon: 'moon', title: 'dark' },
+				],
+				showName: true,
+			},
 		},
 	},
 };

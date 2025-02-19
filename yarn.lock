@@ -706,6 +706,19 @@
     react-dom "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-docs@^8.5.5":
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-8.5.5.tgz#8909b0d791c206a559616b40df798a5bc78441b2"
+  integrity sha512-pQVu6IAwcD7sV7i6alnugT1kHv2EMAhqeS5/Vq2JJoA/QaiHxF83f2L3eCVxP2nKbHYUttdBpIQ+acIsw3jx7Q==
+  dependencies:
+    "@mdx-js/react" "^3.0.0"
+    "@storybook/blocks" "8.5.5"
+    "@storybook/csf-plugin" "8.5.5"
+    "@storybook/react-dom-shim" "8.5.5"
+    react "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    react-dom "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    ts-dedent "^2.0.0"
+
 "@storybook/addon-essentials@^8.5.4":
   version "8.5.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-8.5.4.tgz#978fc8357ea8075158396749bd7596a4c65c4e3c"
@@ -789,6 +802,15 @@
     "@storybook/icons" "^1.2.12"
     ts-dedent "^2.0.0"
 
+"@storybook/blocks@8.5.5":
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-8.5.5.tgz#72e5dcd4c1359bc91ad48c3f5f4c55b66b630943"
+  integrity sha512-O/59Dj2E4t3QtJkUyRgO0X4anAC5dx0M0gfsYACEUWFubhog9x5gw3xgPhFtc1UhezKBedM1nguqdPXHus1mTg==
+  dependencies:
+    "@storybook/csf" "0.1.12"
+    "@storybook/icons" "^1.2.12"
+    ts-dedent "^2.0.0"
+
 "@storybook/builder-vite@8.5.4":
   version "8.5.4"
   resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-8.5.4.tgz#4489c2baee7e886f01ec08bd425030eb101db616"
@@ -824,6 +846,13 @@
   version "8.5.4"
   resolved "https://registry.yarnpkg.com/@storybook/csf-plugin/-/csf-plugin-8.5.4.tgz#e8638a45f07fd3e9d080c29c3cf7f2737438e6af"
   integrity sha512-W368wMblH861QlW5gfZEwF/LYrWQ2NheXgikBfYv73se1WxvQCo8IMLXCNpgmYhse81GsvXRddKULGsqDSH37A==
+  dependencies:
+    unplugin "^1.3.1"
+
+"@storybook/csf-plugin@8.5.5":
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/csf-plugin/-/csf-plugin-8.5.5.tgz#ed4b5aa4f459980df3ebaf30108f5d1dfe6e948c"
+  integrity sha512-R2i+s5eO7i88tuT6um7jidZ/wt0Ar5lEdb2M5bbnZjTZqRAF9YpoRgDDXwTYWyDz55CDTmpMU3O0BFXLeF+ZpQ==
   dependencies:
     unplugin "^1.3.1"
 
@@ -873,6 +902,11 @@
   version "8.5.4"
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-8.5.4.tgz#32f2d82b0a7478f5ad39013fba5d0a093b4e7a01"
   integrity sha512-m6soTAZFlOH5L2CW3V3g1eJ9Z06Gzgv8urOrnqeBmyCTcpuzxs4GRf9whvu5x/ULZAuvAL77H53d9W1/UYI4sQ==
+
+"@storybook/react-dom-shim@8.5.5":
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-8.5.5.tgz#9d7a66468411296a740811f8e62e4801cc00e333"
+  integrity sha512-K4fR61jS9WJqXmrfczS1S7ukJjQw5vjTnxCJbqVpkpW9b5J0KpZr1aM6rvFLH6bNZPWefSRlRHeosaj5ro95IQ==
 
 "@storybook/react-vite@^8.5.4":
   version "8.5.4"
