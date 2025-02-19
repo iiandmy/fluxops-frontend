@@ -35,3 +35,7 @@
 .vertical {
 	flex-direction: column;
 }
+
+.empty {
+	color: var(--color-light-text-primary);
+}
