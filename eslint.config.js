@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import prettier from 'eslint-plugin-prettier';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import react from 'eslint-plugin-react';
+import reactCompiler from 'eslint-plugin-react-compiler';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
@@ -27,6 +28,7 @@ export default tseslint.config(
 			'react-refresh': reactRefresh,
 			prettier: prettier,
 			react: react,
+			'react-compiler': reactCompiler,
 		},
 		rules: {
 			...reactHooks.configs.recommended.rules,
@@ -61,6 +63,7 @@ export default tseslint.config(
 			curly: ['error', 'multi-or-nest'],
 			'brace-style': ['error', '1tbs', { allowSingleLine: true }],
 			'arrow-body-style': ['error', 'as-needed'],
+			'react-compiler/react-compiler': 'error',
 		},
 	}
 );

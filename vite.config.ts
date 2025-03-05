@@ -2,7 +2,18 @@ import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-// https://vite.dev/config/
+const ReactCompilerConfig = {
+	target: '18',
+};
+
 export default defineConfig({
-	plugins: [react(), tsconfigPaths()],
+	plugins: [
+		react({
+			//@ts-expect-error from documentation https://react.dev/learn/react-compiler#usage-with-vite
+			babel: {
+				plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
+			},
+		}),
+		tsconfigPaths(),
+	],
 });
